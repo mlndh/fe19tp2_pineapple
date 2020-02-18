@@ -3,6 +3,20 @@ import { Link } from "react-router-dom";
 import SignOutButton from "../SignOut";
 import * as ROUTES from "../../constants/routes";
 import { AuthUserContext } from "../Session";
+import styled from "styled-components";
+
+const Navigationsection = styled.ul`
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+`;
+
+const Styledlinks = styled.li`
+a{
+  text-decoration: none;
+  color: black;
+}
+`;
 
 const Navigation = () => (
   <div>
@@ -13,7 +27,8 @@ const Navigation = () => (
   </div>
 );
 const NavigationAuth = () => (
-  <ul>
+
+  <Navigationsection>
     <li>
       <Link to={ROUTES.LANDING}>Landing</Link>
     </li>
@@ -26,17 +41,18 @@ const NavigationAuth = () => (
     <li>
       <SignOutButton />
     </li>
-  </ul>
+  </Navigationsection>
+
 );
 
 const NavigationNonAuth = () => (
-  <ul>
-    <li>
+  <Navigationsection>
+    <Styledlinks>
       <Link to={ROUTES.LANDING}>Landing</Link>
-    </li>
-    <li>
+    </Styledlinks>
+    <Styledlinks>
       <Link to={ROUTES.SIGN_IN}>Sign In</Link>
-    </li>
-  </ul>
+    </Styledlinks>
+  </Navigationsection>
 );
 export default Navigation;

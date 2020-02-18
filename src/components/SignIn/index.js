@@ -4,12 +4,30 @@ import { compose } from "recompose";
 import { SignUpLink } from "../SignUp";
 import { withFirebase } from "../Firebase";
 import * as ROUTES from "../../constants/routes";
+import styled from "styled-components";
+
+const Loginsection = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+`;
+const Loginsectiondiv = styled.div`
+width: 150px
+`;
+
+
 const SignInPage = () => (
-  <div>
-    <h1>SignIn</h1>
-    <SignInForm />
-    <SignUpLink />
-  </div>
+  <Loginsection>
+    <Loginsectiondiv>
+      <div>
+        <h1>SignIn</h1>
+        <SignInForm />
+        <SignUpLink />
+      </div>
+    </Loginsectiondiv>
+  </Loginsection>
 );
 const INITIAL_STATE = {
   email: "",
