@@ -9,6 +9,7 @@ const Navigationsection = styled.ul`
   display: flex;
   justify-content: space-around;
   list-style: none;
+  width: 75%;
 `;
 
 const Styledlinks = styled.li`
@@ -29,18 +30,18 @@ const Navigation = () => (
 const NavigationAuth = () => (
 
   <Navigationsection>
-    <li>
+    <Styledlinks>
       <Link to={ROUTES.LANDING}>Landing</Link>
-    </li>
-    <li>
+    </Styledlinks>
+    <Styledlinks>
       <Link to={ROUTES.HOME}>Home</Link>
-    </li>
-    <li>
+    </Styledlinks>
+    <Styledlinks>
       <Link to={ROUTES.ACCOUNT}>Account</Link>
-    </li>
-    <li>
+    </Styledlinks>
+    <Styledlinks>
       <SignOutButton />
-    </li>
+    </Styledlinks>
   </Navigationsection>
 
 );
