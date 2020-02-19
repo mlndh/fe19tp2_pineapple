@@ -11,6 +11,10 @@ import AdminPage from "../Admin";
 import * as ROUTES from "../../constants/routes";
 import { withAuthentication } from "../Session";
 
+import GraphForm from "../GraphForm";
+import { volvo, averagePrice } from "./data";
+//import { averagePrice } from "./data";
+
 const App = () => (
   <Router>
     <div>
