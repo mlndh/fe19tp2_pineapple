@@ -12,6 +12,7 @@ const Loginsection = styled.div`
     align-items: center;
     text-align: center;
     width: 100vw;
+    height: 80vh
 `;
 const Loginsectiondiv = styled.div`
 width: 150px

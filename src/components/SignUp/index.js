@@ -11,6 +11,7 @@ const Signupsection = styled.div`
     align-items: center;
     text-align: center;
     width: 100vw;
+    height: 80vh
 `;
 const Signupsectiondiv = styled.div`
 width: 150px
