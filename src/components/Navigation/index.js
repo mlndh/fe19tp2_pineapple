@@ -29,6 +29,8 @@ const NavigationAuth = () => (
     <li>
       <SignOutButton />
     </li>
+
+    <Link to={ROUTES.APIDATA}> API </Link>
   </ul>
 );
 
@@ -40,6 +42,7 @@ const NavigationNonAuth = () => (
     <li>
       <Link to={ROUTES.SIGN_IN}>Sign In</Link>
     </li>
+    <Link to={ROUTES.APIDATA}> API </Link>
   </ul>
 );
 export default Navigation;
