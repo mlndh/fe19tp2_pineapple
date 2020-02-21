@@ -40,10 +40,15 @@ const NavigationAuth = () => (
       <Link to={ROUTES.ACCOUNT}>Account</Link>
     </Styledlinks>
     <Styledlinks>
+      <Link to={ROUTES.ADMIN}>Admin</Link>
+    </Styledlinks>
+    <Styledlinks>
       <SignOutButton />
     </Styledlinks>
+    <Styledlinks>
+    <Link to={ROUTES.APIDATA}> API </Link>
+    </Styledlinks> 
   </Navigationsection>
-
 );
 
 const NavigationNonAuth = () => (
@@ -53,6 +58,9 @@ const NavigationNonAuth = () => (
     </Styledlinks>
     <Styledlinks>
       <Link to={ROUTES.SIGN_IN}>Sign In</Link>
+    </Styledlinks>
+    <Styledlinks>
+    <Link to={ROUTES.APIDATA}>API</Link>
     </Styledlinks>
   </Navigationsection>
 );
