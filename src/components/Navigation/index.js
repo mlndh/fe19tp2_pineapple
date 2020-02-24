@@ -13,10 +13,10 @@ const Navigationsection = styled.ul`
 `;
 
 const Styledlinks = styled.li`
-a{
-  text-decoration: none;
-  color: black;
-}
+  a {
+    text-decoration: none;
+    color: black;
+  }
 `;
 
 const Navigation = () => (
@@ -28,7 +28,6 @@ const Navigation = () => (
   </div>
 );
 const NavigationAuth = () => (
-
   <Navigationsection>
     <Styledlinks>
       <Link to={ROUTES.LANDING}>Landing</Link>
@@ -43,11 +42,17 @@ const NavigationAuth = () => (
       <Link to={ROUTES.ADMIN}>Admin</Link>
     </Styledlinks>
     <Styledlinks>
-      <SignOutButton />
+      <Link to={ROUTES.Chartmoller}>Möller bil</Link>
     </Styledlinks>
     <Styledlinks>
-    <Link to={ROUTES.APIDATA}> API </Link>
-    </Styledlinks> 
+      <Link to={ROUTES.Chartbrabil}>Brabil</Link>
+    </Styledlinks>
+    <Styledlinks>
+      <Link to={ROUTES.Chartus}>US center</Link>
+    </Styledlinks>
+    <Styledlinks>
+      <SignOutButton />
+    </Styledlinks>
   </Navigationsection>
 );
 
@@ -58,9 +63,6 @@ const NavigationNonAuth = () => (
     </Styledlinks>
     <Styledlinks>
       <Link to={ROUTES.SIGN_IN}>Sign In</Link>
-    </Styledlinks>
-    <Styledlinks>
-    <Link to={ROUTES.APIDATA}>API</Link>
     </Styledlinks>
   </Navigationsection>
 );
