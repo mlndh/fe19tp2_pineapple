@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Bar, Line, Pie, Doughnut } from 'react-chartjs-2';
 
-import { unique, averagePrices } from './data';
-class Chart extends Component {
+import { unique, averagePrices } from './databrabil';
+class Chartbrabil extends Component {
     constructor(props) {
         super(props);
         const priceData = averagePrices(); // {audi: 340000, volvo: 105000}
@@ -53,28 +53,26 @@ class Chart extends Component {
      } */
     render() {
         return (
-            <div>
-                <div className="chart">
-                    <Bar
-                        data={this.state.chartData}
-                        options={{
-                            title: {
-                                display: this.props.displayTitle,
-                                text: 'Overall Look',
-                                fontSize: 23
-                            },
-                            legend: {
-                                display: false,
-                                position: this.props.legendPosition
-                            }
+            <div className="chart">
+                <Bar
+                    data={this.state.chartData}
+                    options={{
+                        title: {
+                            display: this.props.displayTitle,
+                            text: 'Brabil',
+                            fontSize: 23
+                        },
+                        legend: {
+                            display: false,
+                            position: this.props.legendPosition
                         }
-                        }
+                    }
+                    }
 
-                    />
-                </div>
+                />
             </div>
         )
     }
 }
 
-export default Chart;
+export default Chartbrabil;
