@@ -14,7 +14,13 @@ import APIDATA from "../APIDATA";
 import GraphForm from "../GraphForm";
 import { volvo, averagePrice } from "./data";
 
-import Chart from '../TestGraph/Chart';
+import Chart from '../TestGraph/Chart.js';
+import Chartmoller from '../Mollerbil/chartmoller';
+import Chartbrabil from '../Brabil/chartbrabil';
+import Chartus from '../Usbil/chartus';
+
+
+
 //import { averagePrice } from "./data";
 
 const App = () => (
@@ -35,6 +41,9 @@ const App = () => (
       </div>
     </Router>
     <Chart />
+    <Chartmoller />
+    <Chartbrabil />
+    <Chartus />
   </React.Fragment>
 );
 export default withAuthentication(App);
