@@ -23,7 +23,7 @@ const Navigationsection = styled.ul`
   display: flex;
   justify-content: space-around;
   list-style: none;
-  width: 75%;
+  width: 100%;
 `;
 
 const Styledlinks = styled.li`
@@ -57,25 +57,20 @@ const NavigationAuth = () => (
       <Link to={ROUTES.ADMIN}>Admin</Link>
     </Styledlinks>
     <Styledlinks>
-      <SignOutButton />
-    </Styledlinks>
-    <Styledlinks>
     <Link to={ROUTES.APIDATA}> API </Link>
     </Styledlinks> 
+    <Styledlinks>
+      <SignOutButton />
+    </Styledlinks>
+    <GlobalStyle />
   </Navigationsection>
 );
 
 const NavigationNonAuth = () => (
   <Navigationsection>
-  {/*   <Styledlinks>
-      <Link to={ROUTES.LANDING}>Landing</Link>
-    </Styledlinks> */}
     <Styledlinks>
       <Link to={ROUTES.SIGN_IN}>Sign In</Link>
     </Styledlinks>
-   {/*  <Styledlinks>
-    <Link to={ROUTES.APIDATA}>API</Link>
-    </Styledlinks> */}
     <GlobalStyle />
   </Navigationsection>
 );
