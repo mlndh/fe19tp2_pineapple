@@ -1,7 +1,7 @@
-import { volkswagen } from './volkswagen';
-import { seat } from './seat';
-import { skoda } from './skoda';
-import { audi } from './audi';
+import { volkswagen } from '../TestGraph/volkswagen';
+import { seat } from '../TestGraph/seat';
+import { skoda } from '../TestGraph/skoda';
+import { audi } from '../TestGraph/audi';
 
 const arrAvg = arr => arr.reduce((a, b) => {
     //console.log("a: " + a);
@@ -20,3 +20,4 @@ export const averagePrices = () => {
         volkswagen: arrAvg(volkswagenPrices), seat: arrAvg(seatPrices),
     }
 }
+

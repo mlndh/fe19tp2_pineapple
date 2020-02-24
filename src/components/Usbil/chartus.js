@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Bar, Line, Pie, Doughnut } from 'react-chartjs-2';
 
-import { unique, averagePrices } from './datamoller';
-class Chart extends Component {
+import { unique, averagePrices } from './dataus';
+class Chartus extends Component {
     constructor(props) {
         super(props);
         const priceData = averagePrices(); // {audi: 340000, volvo: 105000}
@@ -59,11 +59,11 @@ class Chart extends Component {
                     options={{
                         title: {
                             display: this.props.displayTitle,
-                            text: 'Cities in Stockholm',
+                            text: 'UScenter',
                             fontSize: 23
                         },
                         legend: {
-                            display: this.props.displayTitle,
+                            display: false,
                             position: this.props.legendPosition
                         }
                     }
@@ -75,4 +75,4 @@ class Chart extends Component {
     }
 }
 
-export default Chart;
+export default Chartus;

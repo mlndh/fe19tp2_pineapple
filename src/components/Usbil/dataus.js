@@ -1,11 +1,11 @@
-import { fiat } from './fiat'
-import { hyundai } from './hyundai'
-import { audi } from './audi'
-import { ford } from './ford'
-import { bmw } from './bmw'
-import { landrover } from './landrover'
-import { mercedesbenz } from './mb'
-import { porsche } from './porsche'
+import { fiat } from '../TestGraph/fiat'
+import { hyundai } from '../TestGraph/hyundai'
+import { audi } from '../TestGraph/audi'
+import { ford } from '../TestGraph/ford'
+import { bmw } from '../TestGraph/bmw'
+import { landrover } from '../TestGraph/landrover'
+import { mercedesbenz } from '../TestGraph/mb'
+import { porsche } from '../TestGraph/porsche'
 
 const arrAvg = arr => arr.reduce((a, b) => {
     //console.log("a: " + a);
@@ -14,7 +14,7 @@ const arrAvg = arr => arr.reduce((a, b) => {
 }, 0) / arr.length
 
 export const averagePrices = () => {
-    let audi = audi.prices.map(item => item.nybilspris);
+    let audiPrices = audi.results.map(item => item.nybilspris);
     let fiatPrices = fiat.results.map(item => item.nybilspris);
     let fordPrices = ford.results.map(item => item.nybilspris);
     let bmwPrices = bmw.results.map(item => item.nybilspris);
