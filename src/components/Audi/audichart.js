@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Bar, Line, Pie, Doughnut } from 'react-chartjs-2';
 
-import { unique, averagePrices } from './data';
-class Chart extends Component {
+import { unique, averageYears } from './audiyears';
+class AudiChart extends Component {
     constructor(props) {
         super(props);
-        const priceData = averagePrices(); // {audi: 340000, volvo: 105000}
-        const brands = Object.keys(priceData);
-        const prices = Object.values(priceData)
+        const yearData = averageYears(); // {audi: 340000, volvo: 105000}
+        const brands = Object.keys(yearsData);
+        const years = Object.values(yearsData)
 
         this.state = {
             chartData: {
@@ -15,7 +15,7 @@ class Chart extends Component {
                 datasets: [
                     {
                         label: 'Population',
-                        data: prices,
+                        data: years,
                         backgroundColor: [
                             'pink',
                             'powderblue',
@@ -55,7 +55,7 @@ class Chart extends Component {
         return (
             <div>
                 <div className="chart">
-                    <Doughnut
+                    <Line
                         data={this.state.chartData}
                         options={{
                             title: {
@@ -77,4 +77,4 @@ class Chart extends Component {
     }
 }
 
-export default Chart;
+export default AudiChart;

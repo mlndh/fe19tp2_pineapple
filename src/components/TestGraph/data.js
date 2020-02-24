@@ -1,5 +1,5 @@
 import { volvo } from './volvo';
-import { audi } from './audi';
+import { audi } from '../Audi/audi';
 import { skoda } from './skoda';
 import { volkswagen } from './volkswagen';
 import { seat } from './seat';

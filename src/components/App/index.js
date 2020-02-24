@@ -18,6 +18,8 @@ import Chart from '../TestGraph/Chart.js';
 import Chartmoller from '../Mollerbil/chartmoller';
 import Chartbrabil from '../Brabil/chartbrabil';
 import Chartus from '../Usbil/chartus';
+import AudiChart from '../Audi/audichart';
+
 
 
 

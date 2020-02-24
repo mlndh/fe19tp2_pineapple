@@ -1,6 +1,6 @@
 import { fiat } from '../TestGraph/fiat'
 import { hyundai } from '../TestGraph/hyundai'
-import { audi } from '../TestGraph/audi'
+import { audi } from '../Audi/audi'
 import { ford } from '../TestGraph/ford'
 import { bmw } from '../TestGraph/bmw'
 import { landrover } from '../TestGraph/landrover'
