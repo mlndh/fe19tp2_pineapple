@@ -6,3 +6,6 @@ export const ACCOUNT = "/account";
 export const ADMIN = "/admin";
 export const PASSWORD_FORGET = "/pw-forget";
 export const APIDATA = "/APIDATA";
+export const Chartmoller = "/Brabil";
+export const Chartbrabil = "/Mollerbil";
+export const Chartus = "/Usbil";

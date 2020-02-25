@@ -7,7 +7,7 @@ class Chartbrabil extends Component {
         super(props);
         const priceData = averagePrices(); // {audi: 340000, volvo: 105000}
         const brands = Object.keys(priceData);
-        const prices = Object.values(priceData)
+        const prices = Object.values(priceData);
 
         this.state = {
             chartData: {

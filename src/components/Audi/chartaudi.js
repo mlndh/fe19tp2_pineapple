@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import { Bar, Line, Pie, Doughnut } from 'react-chartjs-2';
 
-import { unique, averageYears } from './audiyears';
-class AudiChart extends Component {
+import { Audiyears } from './audiyears';
+import { averagePrices } from './audiyears';
+class Chartaudi extends Component {
     constructor(props) {
         super(props);
-        const yearData = averageYears(); // {audi: 340000, volvo: 105000}
-        const brands = Object.keys(yearsData);
-        const years = Object.values(yearsData)
+        //const yearData = averageYears(); // {audi: 340000, volvo: 105000}
+        //const brands = Object.keys(yearsData);
+        //const years = Object.values(yearsData)
+        const priceData = averagePrices();
+        const brands = ["2020", "2019", '2018'];
+        const years = ["audi2020Prices", 'audi2019Prices', 'audi2018Prices'];
+        const prices = Object.values(priceData);
 
         this.state = {
             chartData: {
@@ -15,7 +20,7 @@ class AudiChart extends Component {
                 datasets: [
                     {
                         label: 'Population',
-                        data: years,
+                        data: prices,
                         backgroundColor: [
                             'pink',
                             'powderblue',
@@ -60,7 +65,7 @@ class AudiChart extends Component {
                         options={{
                             title: {
                                 display: this.props.displayTitle,
-                                text: 'Overall Look',
+                                text: 'Audi',
                                 fontSize: 23
                             },
                             legend: {
@@ -77,4 +82,4 @@ class AudiChart extends Component {
     }
 }
 
-export default AudiChart;
+export default Chartaudi;
