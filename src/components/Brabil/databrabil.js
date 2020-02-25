@@ -1,6 +1,6 @@
 import { volvo } from '../TestGraph/volvo';
 import { renault } from '../TestGraph/renault'
-import { dacia } from '../TestGraph/dacia'
+import { dacia } from '../Dacia/dacia'
 
 const arrAvg = arr => arr.reduce((a, b) => {
     //console.log("a: " + a);

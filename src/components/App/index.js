@@ -14,11 +14,14 @@ import APIDATA from "../APIDATA";
 import GraphForm from "../GraphForm";
 import { volvo, averagePrice } from "./data";
 
+import Chartdacia from '../Dacia/chartdacia'
+import Chartbmw from '../Bmw/chartbmw'
 import Chartaudi from '../Audi/chartaudi';
 import Chart from "../TestGraph/Chart.js";
 import Chartmoller from "../Mollerbil/chartmoller";
 import Chartbrabil from "../Brabil/chartbrabil";
 import Chartus from "../Usbil/chartus";
+
 
 //import { averagePrice } from "./data";
 
@@ -46,6 +49,9 @@ const App = () => (
     < Chartbrabil />
     < Chartus />
     < Chartaudi />
+    < Chartbmw />
+    < Chartdacia />
+
 
   </React.Fragment>
 );
