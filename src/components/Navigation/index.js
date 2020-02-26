@@ -7,8 +7,8 @@ import styled, { createGlobalStyle } from "styled-components";
 
 const Homeicon = require('../Assets/Home.svg');
 const KPIreport = require('../Assets/Line-graph.svg');
-const Settingsicon = require('../Assets/Settings.svg');
-const Logouticon = require('../Assets/Logout.svg'); 
+const Settingsicon = require('../Assets/Settings.svg'); 
+const Adminicon = require('../Assets/Admin-icon.svg');
 
 const GlobalStyle = createGlobalStyle`
 
@@ -37,6 +37,7 @@ const Navigationsection = styled.ul`
   justify-content: space-around;
   list-style: none;
   width: 100%;
+  align-items: center;
 `;
 
 const Styledlinks = styled.li`
@@ -44,6 +45,10 @@ const Styledlinks = styled.li`
     font-size: 1.2rem;
     text-decoration: none;
     color: black;
+  }
+
+  button {
+    border: none;
   }
 
   img {
@@ -77,16 +82,9 @@ const NavigationAuth = () => (
       </Link>
     </Styledlinks>
     <Styledlinks>
-      <Link to={ROUTES.ADMIN}>ADMIN</Link>
-    </Styledlinks>
-    <Styledlinks>
-      <Link to={ROUTES.Chartmoller}>Möller bil</Link>
-    </Styledlinks>
-    <Styledlinks>
-      <Link to={ROUTES.Chartbrabil}>Brabil</Link>
-    </Styledlinks>
-    <Styledlinks>
-      <Link to={ROUTES.Chartus}>US center</Link>
+      <Link to={ROUTES.ADMIN}>
+        <img src={Adminicon} />
+      </Link>
     </Styledlinks>
     <Styledlinks>
       <SignOutButton />
