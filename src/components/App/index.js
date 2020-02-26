@@ -11,15 +11,10 @@ import AdminPage from "../Admin";
 import * as ROUTES from "../../constants/routes";
 import { withAuthentication } from "../Session";
 import APIDATA from "../APIDATA";
-import GraphForm from "../GraphForm";
-import { volvo, averagePrice } from "./data";
-
-import Chart from '../TestGraph/Chart.js';
-import Chartmoller from '../Mollerbil/chartmoller';
-import Chartbrabil from '../Brabil/chartbrabil';
-import Chartus from '../Usbil/chartus';
-
-
+import Chart from "../TestGraph/Chart.js";
+import Chartmoller from "../Mollerbil/chartmoller";
+import Chartbrabil from "../Brabil/chartbrabil";
+import Chartus from "../Usbil/chartus";
 
 //import { averagePrice } from "./data";
 
@@ -33,17 +28,15 @@ const App = () => (
         <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
         <Route path={ROUTES.SIGN_IN} component={SignInPage} />
         <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
-
         <Route path={ROUTES.HOME} component={HomePage} />
         <Route path={ROUTES.ACCOUNT} component={AccountPage} />
         <Route path={ROUTES.ADMIN} component={AdminPage} />
         <Route path={ROUTES.APIDATA} component={APIDATA} />
+        <Route path={ROUTES.Chartmoller} component={Chartmoller} />
+        <Route path={ROUTES.Chartbrabil} component={Chartbrabil} />
+        <Route path={ROUTES.Chartus} component={Chartus} />
       </div>
     </Router>
-    <Chart />
-    <Chartmoller />
-    <Chartbrabil />
-    <Chartus />
   </React.Fragment>
 );
 export default withAuthentication(App);
