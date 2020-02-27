@@ -30,16 +30,32 @@ html {
     width: 100vw;
     font-family: 'Poppins';
   }
-`
+`;
 
 const Navigationsection = styled.ul`
-  display: flex;
+ /*  display: flex;
   justify-content: space-around;
   list-style: none;
   width: 100%;
   align-items: center;
   z-index: 1;
-  overflow-x: hidden;
+  overflow-x: hidden; */
+
+ /* Detta är det sidebar inställningarna! Behöver även ändra margin-left på själva content */
+    width: 4rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    list-style: none;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+
 `;
 
 const Styledlinks = styled.li`
