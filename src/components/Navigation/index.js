@@ -38,6 +38,8 @@ const Navigationsection = styled.ul`
   list-style: none;
   width: 100%;
   align-items: center;
+  z-index: 1;
+  overflow-x: hidden;
 `;
 
 const Styledlinks = styled.li`
