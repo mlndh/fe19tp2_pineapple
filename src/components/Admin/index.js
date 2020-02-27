@@ -1,5 +1,12 @@
 import React, { Component } from "react";
 import { withFirebase } from "../Firebase";
+import styled from "styled-components";
+
+const Maindiv = styled.div `
+margin-left: 10%
+`;
+
+
 class AdminPage extends Component {
   componentWillUnmount() {
     this.props.firebase.users().off();
@@ -29,11 +36,11 @@ class AdminPage extends Component {
   render() {
     const { users, loading } = this.state;
     return (
-      <div>
+      <Maindiv>
         <h1>Admin</h1>
         {loading && <div>Loading ...</div>}
         <UserList users={users} />
-      </div>
+      </Maindiv>
     );
   }
 }
