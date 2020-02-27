@@ -21,9 +21,9 @@ import Chartus from "../Usbil/chartus";
 const App = () => (
   <React.Fragment>
     <Router>
-      <div>
+        <div>
         <Navigation />
-        <hr />
+        </div>
         <Route exact path={ROUTES.LANDING} component={LandingPage} />
         <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
         <Route path={ROUTES.SIGN_IN} component={SignInPage} />
@@ -35,7 +35,6 @@ const App = () => (
         <Route path={ROUTES.Chartmoller} component={Chartmoller} />
         <Route path={ROUTES.Chartbrabil} component={Chartbrabil} />
         <Route path={ROUTES.Chartus} component={Chartus} />
-      </div>
     </Router>
   </React.Fragment>
 );
