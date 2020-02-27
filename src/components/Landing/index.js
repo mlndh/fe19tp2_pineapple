@@ -6,7 +6,7 @@ import styled, { createGlobalStyle } from "styled-components";
 const Kpidiv = styled.div `
     display: flex;
     justify-content: space-evenly;
-`
+`;
 
 const Styledlinks = styled.div`
   a {
@@ -16,6 +16,10 @@ const Styledlinks = styled.div`
     list-style: none;
     color: black;
   }
+`;
+
+const H1div = styled.div `
+  margin-left: 10%
 `;
 
 const App = () => (
@@ -31,7 +35,9 @@ const App = () => (
       <Link to={ROUTES.Chartus}>US center</Link>
     </Styledlinks>
     </Kpidiv>
+    <H1div>
     <h1>Here is the landing page (here should the KPI reports show instead)</h1>
+  </H1div>
   </div>
 );
 export default App;
