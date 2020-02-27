@@ -33,16 +33,7 @@ html {
 `;
 
 const Navigationsection = styled.ul`
- /*  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  width: 100%;
-  align-items: center;
-  z-index: 1;
-  overflow-x: hidden; */
-
- /* Detta är det sidebar inställningarna! Behöver även ändra margin-left på själva content */
-    width: 4rem;
+    width: 6rem;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -54,7 +45,7 @@ const Navigationsection = styled.ul`
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-evenly;
-
+    box-shadow: 0.1rem 0rem 1rem rgba(0, 0, 0, 0.2);
 
 `;
 
@@ -70,7 +61,7 @@ const Styledlinks = styled.li`
   }
 
   img {
-    width: 2.5rem;
+    width: 3.5rem;
   }
 `;
 
