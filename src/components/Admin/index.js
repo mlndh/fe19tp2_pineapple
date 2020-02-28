@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { withFirebase } from "../Firebase";
+import { SignUpForm } from "../SignUp";
+
 import styled from "styled-components";
 
-const Maindiv = styled.div `
-margin-left: 10%
+const Maindiv = styled.div`
+  margin-left: 10%;
 `;
-
 
 class AdminPage extends Component {
   componentWillUnmount() {
@@ -39,6 +40,7 @@ class AdminPage extends Component {
       <Maindiv>
         <h1>Admin</h1>
         {loading && <div>Loading ...</div>}
+        <SignUpForm />
         <UserList users={users} />
       </Maindiv>
     );

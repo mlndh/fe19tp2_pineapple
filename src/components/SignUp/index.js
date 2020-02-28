@@ -6,17 +6,16 @@ import * as ROUTES from "../../constants/routes";
 import styled from "styled-components";
 
 const Signupsection = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100vw;
-    height: 80vh
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 80vh;
 `;
 const Signupsectiondiv = styled.div`
-width: 150px
+  width: 150px;
 `;
-
 
 const SignUpPage = () => (
   <Signupsection>
@@ -81,7 +80,7 @@ class SignUpFormBase extends Component {
           onChange={this.onChange}
           type="text"
           placeholder="Full Name"
-        />
+        />{" "}
         <input
           name="email"
           value={email}
@@ -95,14 +94,14 @@ class SignUpFormBase extends Component {
           onChange={this.onChange}
           type="password"
           placeholder="Password"
-        />
+        />{" "}
         <input
           name="passwordTwo"
           value={passwordTwo}
           onChange={this.onChange}
           type="password"
           placeholder="Confirm Password"
-        />
+        />{" "}
         <button disabled={isInvalid} type="submit">
           Sign Up
         </button>
