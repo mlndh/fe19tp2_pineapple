@@ -1,23 +1,21 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { compose } from "recompose";
-import { SignUpLink } from "../SignUp";
 import { withFirebase } from "../Firebase";
 import * as ROUTES from "../../constants/routes";
 import styled from "styled-components";
 
 const Loginsection = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100vw;
-    height: 80vh
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 80vh;
 `;
 const Loginsectiondiv = styled.div`
-width: 150px
+  width: 150px;
 `;
-
 
 const SignInPage = () => (
   <Loginsection>
@@ -25,7 +23,6 @@ const SignInPage = () => (
       <div>
         <h1>SignIn</h1>
         <SignInForm />
-        <SignUpLink />
       </div>
     </Loginsectiondiv>
   </Loginsection>

@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { withFirebase } from "../Firebase";
 import styled from "styled-components";
+import { SignUpForm } from "../SignUp";
 
-const Maindiv = styled.div `
-margin-left: 10%
+const Maindiv = styled.div`
+  margin-left: 10%;
 `;
-
 
 class AdminPage extends Component {
   componentWillUnmount() {
@@ -36,11 +36,15 @@ class AdminPage extends Component {
   render() {
     const { users, loading } = this.state;
     return (
-      <Maindiv>
-        <h1>Admin</h1>
-        {loading && <div>Loading ...</div>}
-        <UserList users={users} />
-      </Maindiv>
+      <React.Fragment>
+        <Maindiv>
+          <h1>Admin</h1>
+
+          <SignUpForm />
+          {loading && <div>Loading ...</div>}
+          <UserList users={users} />
+        </Maindiv>
+      </React.Fragment>
     );
   }
 }
