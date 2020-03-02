@@ -110,6 +110,11 @@ const NavigationAuth = ({ authUser }) => (
         <Link to={ROUTES.Chartmoller}></Link>
       )}
     </Styledlinks>
+    <Styledlinks>
+      {authUser.roles.includes(ROLES.BRABIL) && (
+        <Link to={ROUTES.Chartbrabil}></Link>
+      )}
+    </Styledlinks>
 
     <Styledlinks>
       <SignOutButton />
