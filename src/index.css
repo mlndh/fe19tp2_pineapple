@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.chart {
+  max-width: 800px;
+} 
+
+.chartContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.BarChart{
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+}
