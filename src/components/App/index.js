@@ -15,26 +15,28 @@ import Chart from "../TestGraph/Chart.js";
 import Chartmoller from "../Mollerbil/chartmoller";
 import Chartbrabil from "../Brabil/chartbrabil";
 import Chartus from "../Usbil/chartus";
+import KUND from "../Kund";
 
 //import { averagePrice } from "./data";
 
 const App = () => (
   <React.Fragment>
     <Router>
-        <div>
+      <div>
         <Navigation />
-        </div>
-        <Route exact path={ROUTES.LANDING} component={LandingPage} />
-        <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
-        <Route path={ROUTES.SIGN_IN} component={SignInPage} />
-        <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
-        <Route path={ROUTES.HOME} component={HomePage} />
-        <Route path={ROUTES.ACCOUNT} component={AccountPage} />
-        <Route path={ROUTES.ADMIN} component={AdminPage} />
-        <Route path={ROUTES.APIDATA} component={APIDATA} />
-        <Route path={ROUTES.Chartmoller} component={Chartmoller} />
-        <Route path={ROUTES.Chartbrabil} component={Chartbrabil} />
-        <Route path={ROUTES.Chartus} component={Chartus} />
+      </div>
+      <Route exact path={ROUTES.LANDING} component={LandingPage} />
+      <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
+      <Route path={ROUTES.SIGN_IN} component={SignInPage} />
+      <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
+      <Route path={ROUTES.HOME} component={HomePage} />
+      <Route path={ROUTES.ACCOUNT} component={AccountPage} />
+      <Route path={ROUTES.ADMIN} component={AdminPage} />
+      <Route path={ROUTES.APIDATA} component={APIDATA} />
+      <Route path={ROUTES.Chartmoller} component={Chartmoller} />
+      <Route path={ROUTES.Chartbrabil} component={Chartbrabil} />
+      <Route path={ROUTES.Chartus} component={Chartus} />
+      <Route path={ROUTES.KUND} component={KUND} />
     </Router>
   </React.Fragment>
 );

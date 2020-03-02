@@ -10,7 +10,7 @@ const Maindiv = styled.div`
   margin-left: 10%;
 `;
 
-class AdminPage extends Component {
+class Kund extends Component {
   componentWillUnmount() {
     this.props.firebase.users().off();
   }
@@ -40,8 +40,8 @@ class AdminPage extends Component {
     const { users, loading } = this.state;
     return (
       <Maindiv>
-        <h1> Test Admin</h1>
-        <p>The Admim Admin</p>
+        <h1>Admin</h1>
+        <p>Kundsida</p>
         {loading && <div>Loading ...</div>}
         <SignUpForm />
         <UserList users={users} />
@@ -68,5 +68,6 @@ const UserList = ({ users }) => (
   </ul>
 );
 
-const condition = authUser => authUser && authUser.roles.includes(ROLES.ADMIN);
-export default compose(withAuthorization(condition), withFirebase)(AdminPage);
+const condition = authUser =>
+  authUser && authUser.roles.includes(ROLES.MOLLERBIL);
+export default compose(withAuthorization(condition), withFirebase)(Kund);
