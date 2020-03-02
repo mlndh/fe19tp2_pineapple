@@ -15,6 +15,10 @@ import GraphForm from "../GraphForm";
 import { volvo, averagePrice } from "./data";
 import AddButton from '../AddButton';
 import BarChart from '../BarChart';
+import Chartmoller from "../Mollerbil/chartmoller";
+import Chartbrabil from "../Brabil/chartbrabil";
+import Chartus from "../Usbil/chartus";
+import KUND from "../Kund";
 
 // import Chart from "../Charts/Chart.js";
 import MultiChart from "../Charts/MultiChart";
@@ -59,6 +63,7 @@ class App extends React.Component {
             <Route path={ROUTES.ACCOUNT} component={AccountPage} />
             <Route path={ROUTES.ADMIN} component={AdminPage} />
             <Route path={ROUTES.APIDATA} component={APIDATA} />
+
           </div>
         </Router>
         <AddButton handleAddChart={this.handleAddChart} />

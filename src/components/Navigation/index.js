@@ -3,19 +3,65 @@ import { Link } from "react-router-dom";
 import SignOutButton from "../SignOut";
 import * as ROUTES from "../../constants/routes";
 import { AuthUserContext } from "../Session";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+import * as ROLES from "../../constants/roles";
+
+const Homeicon = require("../Assets/Home.svg");
+const KPIreport = require("../Assets/Line-graph.svg");
+const Settingsicon = require("../Assets/Settings.svg");
+const Adminicon = require("../Assets/Admin-icon.svg");
+
+const GlobalStyle = createGlobalStyle`
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }  
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  
+  }
+
+  body {
+    width: 100vw;
+    font-family: 'Poppins';
+  }
+`;
 
 const Navigationsection = styled.ul`
-  display: flex;
-  justify-content: space-around;
+  width: 6rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
   list-style: none;
-  width: 75%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  box-shadow: 0.1rem 0rem 1rem rgba(0, 0, 0, 0.2);
 `;
 
 const Styledlinks = styled.li`
   a {
+    font-size: 1.2rem;
     text-decoration: none;
     color: black;
+  }
+
+  button {
+    border: none;
+  }
+
+  img {
+    width: 3.5rem;
   }
 `;
 
@@ -23,47 +69,66 @@ const Navigation = () => (
   <div>
     {" "}
     <AuthUserContext.Consumer>
-      {authUser => (authUser ? <NavigationAuth /> : <NavigationNonAuth />)}
+      {authUser =>
+        authUser ? (
+          <NavigationAuth authUser={authUser} />
+        ) : (
+          <NavigationNonAuth />
+        )
+      }
     </AuthUserContext.Consumer>{" "}
   </div>
 );
-const NavigationAuth = () => (
+const NavigationAuth = ({ authUser }) => (
   <Navigationsection>
     <Styledlinks>
-      <Link to={ROUTES.LANDING}>Landing</Link>
+      <Link to={ROUTES.HOME}>
+        <img src={Homeicon} />
+      </Link>
     </Styledlinks>
     <Styledlinks>
-      <Link to={ROUTES.HOME}>Home</Link>
+      <Link to={ROUTES.LANDING}>
+        <img src={KPIreport} />
+      </Link>
     </Styledlinks>
     <Styledlinks>
-      <Link to={ROUTES.ACCOUNT}>Account</Link>
+      <Link to={ROUTES.ACCOUNT}>
+        <img src={Settingsicon} />
+      </Link>
     </Styledlinks>
     <Styledlinks>
-      <Link to={ROUTES.ADMIN}>Admin</Link>
+      {authUser.roles.includes(ROLES.ADMIN) && (
+        <Link to={ROUTES.ADMIN}>
+          Admin
+          <img src={Adminicon} />
+        </Link>
+      )}
+    </Styledlinks>
+
+    <Styledlinks>
+      {authUser.roles.includes(ROLES.MOLLERBIL) && (
+        <Link to={ROUTES.Chartmoller}></Link>
+      )}
     </Styledlinks>
     <Styledlinks>
-      <Link to={ROUTES.Chartmoller}>Möller bil</Link>
+      {authUser.roles.includes(ROLES.BRABIL) && (
+        <Link to={ROUTES.Chartbrabil}></Link>
+      )}
     </Styledlinks>
-    <Styledlinks>
-      <Link to={ROUTES.Chartbrabil}>Brabil</Link>
-    </Styledlinks>
-    <Styledlinks>
-      <Link to={ROUTES.Chartus}>US center</Link>
-    </Styledlinks>
+
     <Styledlinks>
       <SignOutButton />
     </Styledlinks>
+    <GlobalStyle />
   </Navigationsection>
 );
 
 const NavigationNonAuth = () => (
   <Navigationsection>
     <Styledlinks>
-      <Link to={ROUTES.LANDING}>Landing</Link>
-    </Styledlinks>
-    <Styledlinks>
       <Link to={ROUTES.SIGN_IN}>Sign In</Link>
     </Styledlinks>
+    <GlobalStyle />
   </Navigationsection>
 );
 export default Navigation;
