@@ -86,11 +86,15 @@ const NavigationAuth = ({ authUser }) => (
         <img src={Homeicon} />
       </Link>
     </Styledlinks>
+
     <Styledlinks>
-      <Link to={ROUTES.LANDING}>
-        <img src={KPIreport} />
-      </Link>
+      {authUser.roles.includes(ROLES.MOLLERBIL) && (
+        <Link to={ROUTES.LANDING}>
+          <img src={KPIreport} />
+        </Link>
+      )}
     </Styledlinks>
+
     <Styledlinks>
       <Link to={ROUTES.ACCOUNT}>
         <img src={Settingsicon} />
@@ -105,12 +109,19 @@ const NavigationAuth = ({ authUser }) => (
     </Styledlinks>
 
     <Styledlinks>
-      {authUser.roles.includes(ROLES.MOLLERBIL) && (
-        <Link to={ROUTES.KUND}></Link>
+      {authUser.roles.includes(ROLES.BRABIL) && (
+        <Link to={ROUTES.LANDINGBRABIL}>
+          <img src={KPIreport} />
+        </Link>
       )}
     </Styledlinks>
+
     <Styledlinks>
-      {authUser.roles.includes(ROLES.BRABIL) && <Link to={ROUTES.KUND}></Link>}
+      {authUser.roles.includes(ROLES.USCENTER) && (
+        <Link to={ROUTES.LANDINGUS}>
+          <img src={KPIreport} />
+        </Link>
+      )}
     </Styledlinks>
 
     <Styledlinks>

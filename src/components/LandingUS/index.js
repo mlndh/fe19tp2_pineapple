@@ -6,9 +6,10 @@ import AddButton from "../AddButton";
 import BarChart from "../BarChart";
 import MultiChart from "../Charts/MultiChart";
 
-const Mollerstyle = styled.body`
-  background: lightblue;
+const USstyle = styled.body`
+  background: lightgreen;
 `;
+
 const Kpidiv = styled.div`
   display: flex;
   justify-content: space-evenly;
@@ -66,22 +67,22 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Mollerstyle>
+        <USstyle>
           <div>
             {/* <Kpidiv>
-            <Styledlinks>
-              <Link to={ROUTES.Chartmoller}>Möller bil</Link>
-            </Styledlinks>
-            <Styledlinks>
-              <Link to={ROUTES.Chartbrabil}>Brabil</Link>
-            </Styledlinks>
-            <Styledlinks>
-              <Link to={ROUTES.Chartus}>US center</Link>
-            </Styledlinks>
-          </Kpidiv> */}
+              <Styledlinks>
+                <Link to={ROUTES.Chartmoller}>Möller bil</Link>
+              </Styledlinks>
+              <Styledlinks>
+                <Link to={ROUTES.Chartbrabil}>Brabil</Link>
+              </Styledlinks>
+              <Styledlinks>
+                <Link to={ROUTES.Chartus}>US center</Link>
+              </Styledlinks>
+            </Kpidiv> */}
             <H1div>
               <h1>
-                MÖLLERBIL LOGGA
+                US CENTER LOGGA
                 <br /> Here is the landing page (here should the KPI reports
                 show instead)
               </h1>
@@ -105,7 +106,7 @@ class App extends React.Component {
               <BarChart brands={this.state.charts} />
             </div>
           </Chartsection>
-        </Mollerstyle>
+        </USstyle>
       </React.Fragment>
     );
   }
