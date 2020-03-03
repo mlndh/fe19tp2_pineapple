@@ -9,4 +9,5 @@ export const APIDATA = "/APIDATA";
 export const Chartmoller = "/Brabil";
 export const Chartbrabil = "/Mollerbil";
 export const Chartus = "/Usbil";
-export const KUND = "/Kund";
+export const LANDINGBRABIL = "/Landingbrabil";
+export const LANDINGUS = "/LandingUS";

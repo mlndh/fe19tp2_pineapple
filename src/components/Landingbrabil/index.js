@@ -5,9 +5,14 @@ import styled, { createGlobalStyle } from "styled-components";
 import AddButton from "../AddButton";
 import BarChart from "../BarChart";
 import MultiChart from "../Charts/MultiChart";
+import { withFirebase } from "../Firebase";
+import { SignUpForm } from "../SignUp";
+import { compose } from "recompose";
+import { withAuthorization } from "../Session";
+import * as ROLES from "../../constants/roles";
 
-const Mollerstyle = styled.body`
-  background: lightblue;
+const Brabilstyle = styled.body`
+  background: beige;
 `;
 const Kpidiv = styled.div`
   display: flex;
@@ -42,7 +47,7 @@ const Chartsection = styled.div`
   height: 80vh;
 `;
 
-class App extends React.Component {
+class Landingbrabil extends React.Component {
   constructor(props) {
     super(props);
 
@@ -66,7 +71,7 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Mollerstyle>
+        <Brabilstyle>
           <div>
             {/* <Kpidiv>
             <Styledlinks>
@@ -81,9 +86,8 @@ class App extends React.Component {
           </Kpidiv> */}
             <H1div>
               <h1>
-                MÖLLERBIL LOGGA
-                <br /> Here is the landing page (here should the KPI reports
-                show instead)
+                BRABILLOGGA <br /> Here is the landing page (here should the KPI
+                reports show instead)
               </h1>
             </H1div>
           </div>
@@ -105,9 +109,13 @@ class App extends React.Component {
               <BarChart brands={this.state.charts} />
             </div>
           </Chartsection>
-        </Mollerstyle>
+        </Brabilstyle>
       </React.Fragment>
     );
   }
 }
-export default App;
+const condition = authUser => authUser && authUser.roles.includes(ROLES.BRABIL);
+export default compose(
+  withAuthorization(condition),
+  withFirebase
+)(Landingbrabil);

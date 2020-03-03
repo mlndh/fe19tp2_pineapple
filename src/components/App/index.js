@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navigation from "../Navigation";
 import LandingPage from "../Landing";
+import LANDINGUS from "../LandingUS";
+import Landingbrabil from "../Landingbrabil";
 import SignUpPage from "../SignUp";
 import SignInPage from "../SignIn";
 import PasswordForgetPage from "../PasswordForget";
@@ -49,6 +51,12 @@ class App extends React.Component {
             <Navigation />
             <hr />
             <Route exact path={ROUTES.LANDING} component={LandingPage} />
+            <Route exact path={ROUTES.LANDINGUS} component={LANDINGUS} />
+            <Route
+              exact
+              path={ROUTES.LANDINGBRABIL}
+              component={Landingbrabil}
+            />
             <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
             <Route path={ROUTES.SIGN_IN} component={SignInPage} />
             <Route

@@ -37,6 +37,7 @@ const INITIAL_STATE = {
   isAdmin: false,
   isMollerbil: false,
   isBrabil: false,
+  isUscenter: false,
   error: null
 };
 
@@ -52,7 +53,8 @@ class SignUpFormBase extends Component {
       passwordOne,
       isAdmin,
       isMollerbil,
-      isBrabil
+      isBrabil,
+      isUscenter
     } = this.state;
     const roles = [];
     if (isAdmin) {
@@ -63,6 +65,9 @@ class SignUpFormBase extends Component {
     }
     if (isBrabil) {
       roles.push(ROLES.BRABIL);
+    }
+    if (isUscenter) {
+      roles.push(ROLES.USCENTER);
     }
     this.props.firebase
 
@@ -99,6 +104,7 @@ class SignUpFormBase extends Component {
       passwordTwo,
       isAdmin,
       isMollerbil,
+      isUscenter,
       isBrabil,
       error
     } = this.state;
@@ -162,6 +168,15 @@ class SignUpFormBase extends Component {
             name="isBrabil"
             type="checkbox"
             checked={isBrabil}
+            onChange={this.onChangeCheckbox}
+          />
+        </label>
+        <label>
+          UScenter:
+          <input
+            name="isUscenter"
+            type="checkbox"
+            checked={isUscenter}
             onChange={this.onChangeCheckbox}
           />
         </label>
