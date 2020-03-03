@@ -7,19 +7,11 @@ import { withFirebase } from "../Firebase";
 
 import { unique, averagePrices } from "./databrabil";
 class Chartbrabil extends Component {
-<<<<<<< HEAD:src/components/Charts/oldchartstuff/Brabil.old/chartbrabil.old
-    constructor(props) {
-        super(props);
-        const priceData = averagePrices(); // {audi: 340000, volvo: 105000}
-        const brands = Object.keys(priceData);
-        const prices = Object.values(priceData);
-=======
   constructor(props) {
     super(props);
     const priceData = averagePrices(); // {audi: 340000, volvo: 105000}
     const brands = Object.keys(priceData);
     const prices = Object.values(priceData);
->>>>>>> origin:src/components/Brabil/chartbrabil.js
 
     this.state = {
       chartData: {
