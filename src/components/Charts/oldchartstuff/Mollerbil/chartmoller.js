@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Bar, Line, Pie, Doughnut } from "react-chartjs-2";
 import { compose } from "recompose";
 import { withAuthorization } from "../Session";
-import * as ROLES from "../../constants/roles";
+import * as ROLES from "../../../constants/roles";
 import { withFirebase } from "../Firebase";
 
 import { unique, averagePrices, averagePrices1 } from "./datamoller";

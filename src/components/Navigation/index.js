@@ -99,7 +99,6 @@ const NavigationAuth = ({ authUser }) => (
     <Styledlinks>
       {authUser.roles.includes(ROLES.ADMIN) && (
         <Link to={ROUTES.ADMIN}>
-          Admin
           <img src={Adminicon} />
         </Link>
       )}
@@ -107,13 +106,11 @@ const NavigationAuth = ({ authUser }) => (
 
     <Styledlinks>
       {authUser.roles.includes(ROLES.MOLLERBIL) && (
-        <Link to={ROUTES.Chartmoller}></Link>
+        <Link to={ROUTES.KUND}></Link>
       )}
     </Styledlinks>
     <Styledlinks>
-      {authUser.roles.includes(ROLES.BRABIL) && (
-        <Link to={ROUTES.Chartbrabil}></Link>
-      )}
+      {authUser.roles.includes(ROLES.BRABIL) && <Link to={ROUTES.KUND}></Link>}
     </Styledlinks>
 
     <Styledlinks>
