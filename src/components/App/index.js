@@ -15,9 +15,6 @@ import GraphForm from "../GraphForm";
 import { volvo, averagePrice } from "./data";
 import AddButton from '../AddButton';
 import BarChart from '../BarChart';
-import Chartmoller from "../Mollerbil/chartmoller";
-import Chartbrabil from "../Brabil/chartbrabil";
-import Chartus from "../Usbil/chartus";
 import KUND from "../Kund";
 
 // import Chart from "../Charts/Chart.js";
