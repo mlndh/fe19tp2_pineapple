@@ -157,8 +157,8 @@ class BarChart extends Component {
         return (
             <div className="BarChart">
                 <Bar
-                    width={400}
-                    height={300}
+                    width={200}
+                    height={200}
                     options={{ maintainAspectRatio: false }}
                     data={this.calcData(this.props.brands)}
                     options={{
