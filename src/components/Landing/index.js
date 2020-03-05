@@ -1,27 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 import AddButton from "../AddButton";
+/* här har vi importen */
 import BarChart from "../BarChart";
 import MultiChart from "../Charts/MultiChart";
 
 const Mollerstyle = styled.body`
   background: lightblue;
-`;
-const Kpidiv = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-`;
-
-const Styledlinks = styled.div`
-  a {
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-decoration: none;
-    list-style: none;
-    color: black;
-  }
 `;
 
 const H1div = styled.div`
@@ -33,6 +20,8 @@ const Buttonstyle = styled.button`
   width: 50px;
 `;
 
+/* här har vi knapp styling */
+
 const Chartsection = styled.div`
   display: flex;
   justify-content: center;
@@ -41,6 +30,19 @@ const Chartsection = styled.div`
   width: 100vw;
   height: 80vh;
 `;
+
+const Chartcontainer = styled.div `
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap;
+`;
+
+const BarCdwqdwdq = styled.div `
+max-width: 800px;
+display: flex;
+flex-wrap: wrap;
+`;
+
 
 class App extends React.Component {
   constructor(props) {
@@ -68,17 +70,6 @@ class App extends React.Component {
       <React.Fragment>
         <Mollerstyle>
           <div>
-            {/* <Kpidiv>
-            <Styledlinks>
-              <Link to={ROUTES.Chartmoller}>Möller bil</Link>
-            </Styledlinks>
-            <Styledlinks>
-              <Link to={ROUTES.Chartbrabil}>Brabil</Link>
-            </Styledlinks>
-            <Styledlinks>
-              <Link to={ROUTES.Chartus}>US center</Link>
-            </Styledlinks>
-          </Kpidiv> */}
             <H1div>
               <h1>
                 MÖLLERBIL LOGGA
@@ -88,10 +79,10 @@ class App extends React.Component {
             </H1div>
           </div>
           <Chartsection>
+            <Chartcontainer>
             <Buttonstyle>
               <AddButton handleAddChart={this.handleAddChart} />
             </Buttonstyle>
-            <div className="chartContainer">
               {this.state.charts.map((chart, index) => {
                 return (
                   <MultiChart
@@ -100,10 +91,8 @@ class App extends React.Component {
                   />
                 );
               })}
-              {/* <MultiChart /> */}
-              {/* < Chart /> */}
               <BarChart brands={this.state.charts} />
-            </div>
+            </Chartcontainer>
           </Chartsection>
         </Mollerstyle>
       </React.Fragment>
