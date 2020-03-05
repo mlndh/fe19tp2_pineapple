@@ -34,6 +34,7 @@ html {
 `;
 
 const Navigationsection = styled.ul`
+  background: white;
   width: 6rem;
   height: 100vh;
   position: fixed;

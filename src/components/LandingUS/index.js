@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
 import styled, { createGlobalStyle } from "styled-components";
 import AddButton from "../AddButton";
+
 import BarChart from "../BarChart";
 import MultiChart from "../Charts/MultiChart";
 import { withAuthorization } from "../Session";
@@ -49,8 +50,9 @@ class LandingUS extends React.Component {
     super(props);
 
     this.handleAddChart = this.handleAddChart.bind(this);
+    this.handleRemoveChart = this.handleRemoveChart.bind(this);
     this.handleChartBrandChange = this.handleChartBrandChange.bind(this);
-    this.state = { charts: ["Audi"] };
+    this.state = {};
   }
 
   handleAddChart() {
@@ -62,15 +64,20 @@ class LandingUS extends React.Component {
       .set({
         ...chartArray
       });
-    /*
+  }
+  handleRemoveChart(index) {
     const chartArray = this.state.charts;
-    chartArray.push("Audi");
-    this.setState({ charts: chartArray });
-*/
+    const newArray = chartArray.splice(index, 1);
+    this.props.firebase
+      .user(this.props.authUser.uid)
+      .child("charts")
+      .set({
+        ...chartArray
+      });
   }
 
   handleChartBrandChange(index, brand) {
-    console.log("index: " + index + ", brand: " + brand);
+    //console.log("index: " + index + ", brand: " + brand);
     const chartArray = this.state.charts;
     chartArray[index] = brand;
     this.props.firebase
@@ -79,17 +86,18 @@ class LandingUS extends React.Component {
       .set({
         ...chartArray
       });
-    //this.setState({ charts: chartArray });
   }
 
   componentDidMount() {
-    //this.setState({ loading: true });
     this.props.firebase
       .user(this.props.authUser.uid)
       .child("charts")
       .on("value", snapshot => {
-        const chartObject = snapshot.val();
-        console.log(chartObject);
+        let chartObject = snapshot.val();
+        //console.log(chartObject);
+        if (!chartObject) {
+          chartObject = [];
+        }
         this.setState({
           charts: chartObject
         });
@@ -128,17 +136,22 @@ class LandingUS extends React.Component {
               <AddButton handleAddChart={this.handleAddChart} />
             </Buttonstyle>
             <div className="chartContainer">
-              {this.state.charts.map((chart, index) => {
-                return (
-                  <MultiChart
-                    handleChartBrandChange={this.handleChartBrandChange}
-                    index={index}
-                  />
-                );
-              })}
+              {this.state.charts
+                ? this.state.charts.map((chart, index) => (
+                    <MultiChart
+                      handleChartBrandChange={this.handleChartBrandChange}
+                      index={index}
+                      chart={chart}
+                      handleRemoveChart={this.handleRemoveChart}
+                    />
+                  ))
+                : null}
+
+              {this.state.charts ? (
+                <BarChart brands={this.state.charts} />
+              ) : null}
               {/* <MultiChart /> */}
               {/* < Chart /> */}
-              <BarChart brands={this.state.charts} />
             </div>
           </Chartsection>
         </USstyle>
