@@ -48,7 +48,7 @@ const Navigationsection = styled.ul`
   box-shadow: 0.1rem 0rem 1rem rgba(0, 0, 0, 0.2);
   
   @media (max-width: 380px) {
-    background-color: #333;
+    background-color: red;
     overflow: hidden;
     bottom: 0;
     width: 100vw;
@@ -64,17 +64,16 @@ const Styledlinks = styled.li`
   }
 
   button {
-    border: none;
+   /*  border: none; */
   }
 
   img {
     width: 3.5rem;
+    background-color: red;
   }
 `;
 
 const Navigation = () => (
-  <div>
-    {" "}
     <AuthUserContext.Consumer>
       {authUser =>
         authUser ? (
@@ -83,8 +82,7 @@ const Navigation = () => (
           <NavigationNonAuth />
         )
       }
-    </AuthUserContext.Consumer>{" "}
-  </div>
+    </AuthUserContext.Consumer>
 );
 const NavigationAuth = ({ authUser }) => (
   <Navigationsection>
