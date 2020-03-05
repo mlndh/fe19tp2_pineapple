@@ -5,6 +5,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import AddButton from "../AddButton";
 import BarChart from "../BarChart";
 import MultiChart from "../Charts/MultiChart";
+import { withAuthorization } from "../Session";
 
 const USstyle = styled.body`
   background: lightgreen;
@@ -43,7 +44,7 @@ const Chartsection = styled.div`
   height: 80vh;
 `;
 
-class App extends React.Component {
+class LandingUS extends React.Component {
   constructor(props) {
     super(props);
 
@@ -55,15 +56,49 @@ class App extends React.Component {
   handleAddChart() {
     const chartArray = this.state.charts;
     chartArray.push("Audi");
+    this.props.firebase
+      .user(this.props.authUser.uid)
+      .child("charts")
+      .set({
+        ...chartArray
+      });
+    /*
+    const chartArray = this.state.charts;
+    chartArray.push("Audi");
     this.setState({ charts: chartArray });
+*/
   }
 
   handleChartBrandChange(index, brand) {
-    //console.log("index: " + index + ", brand: " + brand);
+    console.log("index: " + index + ", brand: " + brand);
     const chartArray = this.state.charts;
     chartArray[index] = brand;
-    this.setState({ charts: chartArray });
+    this.props.firebase
+      .user(this.props.authUser.uid)
+      .child("charts")
+      .set({
+        ...chartArray
+      });
+    //this.setState({ charts: chartArray });
   }
+
+  componentDidMount() {
+    //this.setState({ loading: true });
+    this.props.firebase
+      .user(this.props.authUser.uid)
+      .child("charts")
+      .on("value", snapshot => {
+        const chartObject = snapshot.val();
+        console.log(chartObject);
+        this.setState({
+          charts: chartObject
+        });
+      });
+  }
+  componentWillUnmount() {
+    this.props.firebase.user(this.props.authUser.uid).off();
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -111,4 +146,5 @@ class App extends React.Component {
     );
   }
 }
-export default App;
+const condition = authUser => !!authUser;
+export default withAuthorization(condition)(LandingUS);
