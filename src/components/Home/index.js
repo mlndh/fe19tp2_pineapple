@@ -2,8 +2,8 @@ import React from "react";
 import { withAuthorization } from "../Session";
 import styled from "styled-components";
 
-const Maindiv = styled.div `
-  margin-left: 10%
+const Maindiv = styled.div`
+  margin-left: 10%;
 `;
 
 const HomePage = () => (
