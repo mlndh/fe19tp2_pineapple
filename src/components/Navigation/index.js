@@ -37,7 +37,6 @@ const Navigationsection = styled.ul`
   width: 6rem;
   height: 100vh;
   position: fixed;
-  top: 0;
   left: 0;
   overflow-x: hidden;
   list-style: none;
@@ -47,6 +46,14 @@ const Navigationsection = styled.ul`
   flex-wrap: wrap;
   justify-content: space-evenly;
   box-shadow: 0.1rem 0rem 1rem rgba(0, 0, 0, 0.2);
+  
+  @media (max-width: 380px) {
+    background-color: #333;
+    overflow: hidden;
+    bottom: 0;
+    width: 100vw;
+    height: 6%;
+  }
 `;
 
 const Styledlinks = styled.li`
