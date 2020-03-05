@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
 import { Bar, Line, Pie, Doughnut } from 'react-chartjs-2';
-
 //import { multi } from './multiyears';
 import { averagePrices, getBrands } from './multiyears';
+import styled from "styled-components";
+
+const Selectcarbrand = styled.div`
+    
+    `;
+
+/* const Buttonstyle = styled.button`
+  margin-left: 10%;
+  color: red;
+  width: 50px;
+`; */
 
 class MultiChart extends Component {
     constructor(props) {
@@ -50,7 +60,6 @@ class MultiChart extends Component {
                 ]
             }
         }
-
     }
     handleChange(event) {
         this.props.handleChartBrandChange(this.props.index, event.target.value);
@@ -96,25 +105,36 @@ class MultiChart extends Component {
         legendPosition: 'bottom'
 
     }
-    /*  componentDidMount() {
-         console.log(unique);
- 
-     } */
+
+    handleAddChart() {
+        const chartArray = this.state.charts;
+        chartArray.push("Audi");
+        this.setState({ charts: chartArray });
+    }
+
+    handleChartBrandChange(index, brand) {
+        //console.log("index: " + index + ", brand: " + brand);
+        const chartArray = this.state.charts;
+        chartArray[index] = brand;
+        this.setState({ charts: chartArray });
+    }
+
+
     render() {
         const brands = getBrands();
         return (
-            <div key={this.props.index} className="chart">
-                <select onChange={this.handleChange}>
-                    {brands.map(brand => (<option>{brand}</option>))}
-                    {/*   <option>{brands[0]}</option>
-                    <option>{brands[1]}</option>
-                    <option>{brands[2]}</option> */}
-                </select>
+            <div>
+                <Selectcarbrand key={this.props.index}>
+                    <select onChange={this.handleChange}>
+                        {brands.map(brand => (<option>{brand}</option>))}
+                    </select>
+
+                </Selectcarbrand>
                 <div>
                     <Line
                         data={this.state.chartData}
-                        width={400}
-                        height={300}
+                        width={200}
+                        height={200}
                         options={{ maintainAspectRatio: false }}
                         options={{
                             title: {
@@ -130,10 +150,12 @@ class MultiChart extends Component {
                         }
 
                     />
+
                 </div>
             </div>
         )
     }
 }
+
 
 export default MultiChart;
