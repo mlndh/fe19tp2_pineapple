@@ -11,8 +11,13 @@ import { compose } from "recompose";
 import { withAuthorization } from "../Session";
 import * as ROLES from "../../constants/roles";
 
+const Brabilicon = require("../Assets/brabil.jpeg");
+
 const Brabilstyle = styled.div`
   background: beige;
+  img {
+    width:  9rem;
+  }
 `;
 
 const Styledlinks = styled.div`
@@ -108,7 +113,7 @@ class Landingbrabil extends React.Component {
       <React.Fragment>
         <Brabilstyle>
           <H1div>
-            <h1>BRABILLOGGA</h1>
+            <h1><img src={Brabilicon} /></h1>
           </H1div>
 
           <Chartsection>
@@ -118,13 +123,13 @@ class Landingbrabil extends React.Component {
             <div className="chartContainer">
               {this.state.charts
                 ? this.state.charts.map((chart, index) => (
-                    <MultiChart
-                      handleChartBrandChange={this.handleChartBrandChange}
-                      index={index}
-                      chart={chart}
-                      handleRemoveChart={this.handleRemoveChart}
-                    />
-                  ))
+                  <MultiChart
+                    handleChartBrandChange={this.handleChartBrandChange}
+                    index={index}
+                    chart={chart}
+                    handleRemoveChart={this.handleRemoveChart}
+                  />
+                ))
                 : null}
 
               {this.state.charts ? (
