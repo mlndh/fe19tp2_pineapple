@@ -11,12 +11,13 @@ import { compose } from "recompose";
 import { withAuthorization } from "../Session";
 import * as ROLES from "../../constants/roles";
 
-const Brabilstyle = styled.body`
+const Brabilicon = require("../Assets/brabil.jpeg");
+
+const Brabilstyle = styled.div`
   background: beige;
-`;
-const Kpidiv = styled.div`
-  display: flex;
-  justify-content: space-evenly;
+  img {
+    width:  9rem;
+  }
 `;
 
 const Styledlinks = styled.div`
@@ -111,25 +112,10 @@ class Landingbrabil extends React.Component {
     return (
       <React.Fragment>
         <Brabilstyle>
-          <div>
-            {/* <Kpidiv>
-            <Styledlinks>
-              <Link to={ROUTES.Chartmoller}>Möller bil</Link>
-            </Styledlinks>
-            <Styledlinks>
-              <Link to={ROUTES.Chartbrabil}>Brabil</Link>
-            </Styledlinks>
-            <Styledlinks>
-              <Link to={ROUTES.Chartus}>US center</Link>
-            </Styledlinks>
-          </Kpidiv> */}
-            <H1div>
-              <h1>
-                BRABILLOGGA <br /> Here is the landing page (here should the KPI
-                reports show instead)
-              </h1>
-            </H1div>
-          </div>
+          <H1div>
+            <h1><img src={Brabilicon} /></h1>
+          </H1div>
+
           <Chartsection>
             <Buttonstyle>
               <AddButton handleAddChart={this.handleAddChart} />
@@ -137,13 +123,13 @@ class Landingbrabil extends React.Component {
             <div className="chartContainer">
               {this.state.charts
                 ? this.state.charts.map((chart, index) => (
-                    <MultiChart
-                      handleChartBrandChange={this.handleChartBrandChange}
-                      index={index}
-                      chart={chart}
-                      handleRemoveChart={this.handleRemoveChart}
-                    />
-                  ))
+                  <MultiChart
+                    handleChartBrandChange={this.handleChartBrandChange}
+                    index={index}
+                    chart={chart}
+                    handleRemoveChart={this.handleRemoveChart}
+                  />
+                ))
                 : null}
 
               {this.state.charts ? (

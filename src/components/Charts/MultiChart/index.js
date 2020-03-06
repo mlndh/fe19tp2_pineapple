@@ -14,7 +14,13 @@ class MultiChart extends Component {
         const dataBrands = getBrands();
 
         //const priceData = averagePrices(dataBrands[0]);
-        const priceData = averagePrices(this.props.chart);
+        let priceData;
+        if (this.props.chart) {
+            priceData = averagePrices(this.props.chart);
+        }
+        else {
+            priceData = averagePrices(dataBrands[0]);
+        }
         const brands = ["2018", "2019", "2020"];
         const years = ["2018Prices", "2019Prices", "2020Prices"];
         const prices = Object.values(priceData);

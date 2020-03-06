@@ -75,15 +75,23 @@ const Styledlinks = styled.li`
 `;
 
 const Navigation = () => (
+<<<<<<< HEAD
+=======
+  <div>
+>>>>>>> 0b41cffb8216b4b46118f4da4b73ba296fb54933
     <AuthUserContext.Consumer>
       {authUser =>
         authUser ? (
           <NavigationAuth authUser={authUser} />
         ) : (
-          <NavigationNonAuth />
-        )
+            <NavigationNonAuth />
+          )
       }
     </AuthUserContext.Consumer>
+<<<<<<< HEAD
+=======
+  </div>
+>>>>>>> 0b41cffb8216b4b46118f4da4b73ba296fb54933
 );
 const NavigationAuth = ({ authUser }) => (
   <Navigationsection>
@@ -93,13 +101,13 @@ const NavigationAuth = ({ authUser }) => (
       </Link>
     </Styledlinks>
 
-    <Styledlinks>
+    {/* <Styledlinks>
       {authUser.roles.includes(ROLES.MOLLERBIL) && (
         <Link to={ROUTES.LANDING}>
           <img src={KPIreport} />
         </Link>
       )}
-    </Styledlinks>
+    </Styledlinks> */}
 
     <Styledlinks>
       <Link to={ROUTES.ACCOUNT}>
