@@ -6,13 +6,12 @@ import LANDINGUS from "../LandingUS";
 import Landingbrabil from "../Landingbrabil";
 import SignUpPage from "../SignUp";
 import SignInPage from "../SignIn";
-import PasswordForgetPage from "../PasswordForget";
 import HomePage from "../Home";
 import AccountPage from "../Account";
 import AdminPage from "../Admin";
 import * as ROUTES from "../../constants/routes";
 import { withAuthentication } from "../Session";
-import APIDATA from "../APIDATA";
+
 //import GraphForm from "../GraphForm";
 //import { volvo, averagePrice } from "./data";
 
@@ -52,8 +51,11 @@ class App extends React.Component {
             <hr />
             <Switch>
               {/* <Route exact path={ROUTES.LANDING} component={LandingPage} /> */}
-              <Route exact path={ROUTES.LANDING} render={() => <LandingPage />} />
-
+              <Route
+                exact
+                path={ROUTES.LANDING}
+                render={() => <LandingPage />}
+              />
               <Route exact path={ROUTES.LANDINGUS} component={LANDINGUS} />
               <Route
                 exact
@@ -62,14 +64,9 @@ class App extends React.Component {
               />
               <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
               <Route path={ROUTES.SIGN_IN} component={SignInPage} />
-              <Route
-                path={ROUTES.PASSWORD_FORGET}
-                component={PasswordForgetPage}
-              />
               <Route path={ROUTES.HOME} component={HomePage} />
               <Route path={ROUTES.ACCOUNT} component={AccountPage} />
               <Route path={ROUTES.ADMIN} component={AdminPage} />
-              <Route path={ROUTES.APIDATA} component={APIDATA} />
             </Switch>
           </div>
         </Router>
