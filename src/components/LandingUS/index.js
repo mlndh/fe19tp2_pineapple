@@ -8,8 +8,13 @@ import BarChart from "../BarChart";
 import MultiChart from "../Charts/MultiChart";
 import { withAuthorization } from "../Session";
 
+const UScentericon = require("../Assets/US center.jpeg");
+
 const USstyle = styled.div`
   background: lightgrey;
+  img {
+    width: 25rem;
+  }
 `;
 
 const Styledlinks = styled.div`
@@ -107,7 +112,7 @@ class LandingUS extends React.Component {
       <React.Fragment>
         <USstyle>
           <H1div>
-            <h1>US CENTER LOGGA</h1>
+            <h1><img src={UScentericon} /></h1>
           </H1div>
 
           <Chartsection>
@@ -117,13 +122,13 @@ class LandingUS extends React.Component {
             <div className="chartContainer">
               {this.state.charts
                 ? this.state.charts.map((chart, index) => (
-                    <MultiChart
-                      handleChartBrandChange={this.handleChartBrandChange}
-                      index={index}
-                      chart={chart}
-                      handleRemoveChart={this.handleRemoveChart}
-                    />
-                  ))
+                  <MultiChart
+                    handleChartBrandChange={this.handleChartBrandChange}
+                    index={index}
+                    chart={chart}
+                    handleRemoveChart={this.handleRemoveChart}
+                  />
+                ))
                 : null}
 
               {this.state.charts ? (
