@@ -8,7 +8,7 @@ import { averagePrices, getBrands } from '../Charts/MultiChart/multiyears';
 class BarChart extends Component {
     constructor(props) {
         super(props);
-        console.log("constructor ran")
+        console.log("BarChart constructor ran")
         const dataBrands = props.brands;
         //const dataBrands = ['Audi', 'Volvo']
         const priceData = averagePrices(dataBrands[0]);

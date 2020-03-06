@@ -68,16 +68,15 @@ const Styledlinks = styled.li`
 
 const Navigation = () => (
   <div>
-    {" "}
     <AuthUserContext.Consumer>
       {authUser =>
         authUser ? (
           <NavigationAuth authUser={authUser} />
         ) : (
-          <NavigationNonAuth />
-        )
+            <NavigationNonAuth />
+          )
       }
-    </AuthUserContext.Consumer>{" "}
+    </AuthUserContext.Consumer>
   </div>
 );
 const NavigationAuth = ({ authUser }) => (
@@ -88,13 +87,13 @@ const NavigationAuth = ({ authUser }) => (
       </Link>
     </Styledlinks>
 
-    <Styledlinks>
+    {/* <Styledlinks>
       {authUser.roles.includes(ROLES.MOLLERBIL) && (
         <Link to={ROUTES.LANDING}>
           <img src={KPIreport} />
         </Link>
       )}
-    </Styledlinks>
+    </Styledlinks> */}
 
     <Styledlinks>
       <Link to={ROUTES.ACCOUNT}>

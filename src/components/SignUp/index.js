@@ -60,9 +60,9 @@ class SignUpFormBase extends Component {
     if (isAdmin) {
       roles.push(ROLES.ADMIN);
     }
-    if (isMollerbil) {
+    /* if (isMollerbil) {
       roles.push(ROLES.MOLLERBIL);
-    }
+    } */
     if (isBrabil) {
       roles.push(ROLES.BRABIL);
     }
