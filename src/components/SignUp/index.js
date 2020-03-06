@@ -52,7 +52,7 @@ class SignUpFormBase extends Component {
       email,
       passwordOne,
       isAdmin,
-      isMollerbil,
+      // isMollerbil,
       isBrabil,
       isUscenter
     } = this.state;
@@ -103,7 +103,7 @@ class SignUpFormBase extends Component {
       passwordOne,
       passwordTwo,
       isAdmin,
-      isMollerbil,
+      // isMollerbil,
       isUscenter,
       isBrabil,
       error
@@ -153,7 +153,7 @@ class SignUpFormBase extends Component {
             onChange={this.onChangeCheckbox}
           />
         </label>
-        <label>
+        {/* <label>
           Mollerbil:
           <input
             name="isMollerbil"
@@ -161,7 +161,7 @@ class SignUpFormBase extends Component {
             checked={isMollerbil}
             onChange={this.onChangeCheckbox}
           />
-        </label>
+        </label> */}
         <label>
           Brabil:
           <input
