@@ -34,9 +34,12 @@ const H1div = styled.div`
   margin-left: 10%;
 `;
 const Buttonstyle = styled.button`
-  margin-left: 10%;
-  color: red;
-  width: 50px;
+background-color: white;
+width: 3rem;
+height: 1.8rem;
+border: none;
+border-radius: 1rem;
+text-align: center;
 `;
 
 const Chartsection = styled.div`
