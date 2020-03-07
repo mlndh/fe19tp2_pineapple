@@ -49,7 +49,7 @@ const Navigationsection = styled.ul`
   box-shadow: 0.1rem 0rem 1rem rgba(0, 0, 0, 0.2);
   
   @media (max-width: 380px) {
-    background-color: red;
+    background-color: white;
     overflow: hidden;
     bottom: 0;
     width: 100vw;
@@ -65,20 +65,17 @@ const Styledlinks = styled.li`
   }
 
   button {
-   /*  border: none; */
+   border: none;
   }
 
   img {
     width: 3.5rem;
-    background-color: red;
+    background-color: white;
   }
 `;
 
 const Navigation = () => (
-<<<<<<< HEAD
-=======
   <div>
->>>>>>> 0b41cffb8216b4b46118f4da4b73ba296fb54933
     <AuthUserContext.Consumer>
       {authUser =>
         authUser ? (
@@ -88,10 +85,7 @@ const Navigation = () => (
           )
       }
     </AuthUserContext.Consumer>
-<<<<<<< HEAD
-=======
   </div>
->>>>>>> 0b41cffb8216b4b46118f4da4b73ba296fb54933
 );
 const NavigationAuth = ({ authUser }) => (
   <Navigationsection>
@@ -101,19 +95,22 @@ const NavigationAuth = ({ authUser }) => (
       </Link>
     </Styledlinks>
 
-    {/* <Styledlinks>
-      {authUser.roles.includes(ROLES.MOLLERBIL) && (
-        <Link to={ROUTES.LANDING}>
+    <Styledlinks>
+      {authUser.roles.includes(ROLES.BRABIL) && (
+        <Link to={ROUTES.LANDINGBRABIL}>
           <img src={KPIreport} />
         </Link>
       )}
-    </Styledlinks> */}
-
-    <Styledlinks>
-      <Link to={ROUTES.ACCOUNT}>
-        <img src={Settingsicon} />
-      </Link>
     </Styledlinks>
+    
+    <Styledlinks>
+      {authUser.roles.includes(ROLES.USCENTER) && (
+        <Link to={ROUTES.LANDINGUS}>
+          <img src={KPIreport} />
+        </Link>
+      )}
+    </Styledlinks>
+    
     <Styledlinks>
       {authUser.roles.includes(ROLES.ADMIN) && (
         <Link to={ROUTES.ADMIN}>
@@ -123,19 +120,9 @@ const NavigationAuth = ({ authUser }) => (
     </Styledlinks>
 
     <Styledlinks>
-      {authUser.roles.includes(ROLES.BRABIL) && (
-        <Link to={ROUTES.LANDINGBRABIL}>
-          <img src={KPIreport} />
-        </Link>
-      )}
-    </Styledlinks>
-
-    <Styledlinks>
-      {authUser.roles.includes(ROLES.USCENTER) && (
-        <Link to={ROUTES.LANDINGUS}>
-          <img src={KPIreport} />
-        </Link>
-      )}
+      <Link to={ROUTES.ACCOUNT}>
+        <img src={Settingsicon} />
+      </Link>
     </Styledlinks>
 
     <Styledlinks>
