@@ -42,7 +42,7 @@ const Chartsection = styled.div`
   align-items: center;
   text-align: center;
   width: 100vw;
-  height: auto;
+  height: 80%;
 `;
 
 class LandingUS extends React.Component {
