@@ -45,7 +45,7 @@ const Chartsection = styled.div`
   align-items: center;
   text-align: center;
   width: 100vw;
-  height: 80vh;
+  height: auto;
 `;
 
 class Landingbrabil extends React.Component {
