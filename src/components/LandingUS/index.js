@@ -11,9 +11,12 @@ import { withAuthorization } from "../Session";
 const UScentericon = require("../Assets/US center.jpeg");
 
 const USstyle = styled.div`
-  background: lightgrey;
+  background: beige;
   img {
-    width: 25rem;
+    width:  9rem;
+  }
+  @media (max-width: 649px) {
+    margin-bottom: 13%;
   }
 `;
 
@@ -31,9 +34,13 @@ const H1div = styled.div`
   margin-left: 10%;
 `;
 const Buttonstyle = styled.button`
-  margin-left: 10%;
-  color: red;
-  width: 50px;
+background-color: white;
+width: 3rem;
+height: 1.8rem;
+border: none;
+border-radius: 1rem;
+text-align: center;
+margin-bottom: 2%;
 `;
 
 const Chartsection = styled.div`
@@ -41,8 +48,17 @@ const Chartsection = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex-wrap: wrap;
   width: 100vw;
-  height: 80vh;
+  min-height: 85vh;
+`;
+
+
+const Chartcontainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 `;
 
 class LandingUS extends React.Component {
@@ -134,8 +150,6 @@ class LandingUS extends React.Component {
               {this.state.charts ? (
                 <BarChart brands={this.state.charts} />
               ) : null}
-              {/* <MultiChart /> */}
-              {/* < Chart /> */}
             </div>
           </Chartsection>
         </USstyle>

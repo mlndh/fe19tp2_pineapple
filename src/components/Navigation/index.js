@@ -38,7 +38,6 @@ const Navigationsection = styled.ul`
   width: 6rem;
   height: 100vh;
   position: fixed;
-  top: 0;
   left: 0;
   overflow-x: hidden;
   list-style: none;
@@ -48,6 +47,14 @@ const Navigationsection = styled.ul`
   flex-wrap: wrap;
   justify-content: space-evenly;
   box-shadow: 0.1rem 0rem 1rem rgba(0, 0, 0, 0.2);
+  
+  @media (max-width: 649px) {
+    background-color: white;
+    overflow: hidden;
+    bottom: 0;
+    width: 100vw;
+    height: 6%;
+  }
 `;
 
 const Styledlinks = styled.li`
@@ -58,11 +65,13 @@ const Styledlinks = styled.li`
   }
 
   button {
-    border: none;
+   border: none;
+   background-color: transparent;
   }
 
   img {
     width: 3.5rem;
+    background-color: transparent;
   }
 `;
 
@@ -87,19 +96,24 @@ const NavigationAuth = ({ authUser }) => (
       </Link>
     </Styledlinks>
 
-    {/* <Styledlinks>
-      {authUser.roles.includes(ROLES.MOLLERBIL) && (
-        <Link to={ROUTES.LANDING}>
+    <Styledlinks>
+      {authUser.roles.includes(ROLES.BRABIL) && (
+        <Link to={ROUTES.LANDINGBRABIL}>
           <img src={KPIreport} />
         </Link>
       )}
-    </Styledlinks> */}
-
-    <Styledlinks>
-      <Link to={ROUTES.ACCOUNT}>
-        <img src={Settingsicon} />
-      </Link>
     </Styledlinks>
+    
+        {/* These Roles.CARCOMPANY creates a dead box in navbar on mobileview! need the get fixed before launch! */}
+
+    {<Styledlinks>
+      {authUser.roles.includes(ROLES.USCENTER) && (
+        <Link to={ROUTES.LANDINGUS}>
+          <img src={KPIreport} />
+        </Link>
+      )}
+    </Styledlinks>}
+    
     <Styledlinks>
       {authUser.roles.includes(ROLES.ADMIN) && (
         <Link to={ROUTES.ADMIN}>
@@ -109,19 +123,9 @@ const NavigationAuth = ({ authUser }) => (
     </Styledlinks>
 
     <Styledlinks>
-      {authUser.roles.includes(ROLES.BRABIL) && (
-        <Link to={ROUTES.LANDINGBRABIL}>
-          <img src={KPIreport} />
-        </Link>
-      )}
-    </Styledlinks>
-
-    <Styledlinks>
-      {authUser.roles.includes(ROLES.USCENTER) && (
-        <Link to={ROUTES.LANDINGUS}>
-          <img src={KPIreport} />
-        </Link>
-      )}
+      <Link to={ROUTES.ACCOUNT}>
+        <img src={Settingsicon} />
+      </Link>
     </Styledlinks>
 
     <Styledlinks>

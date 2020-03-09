@@ -3,20 +3,14 @@ import { Bar, Line, Pie, Doughnut } from 'react-chartjs-2';
 
 import { averagePrices, getBrands } from '../Charts/MultiChart/multiyears';
 
-// props: brands: ['audi', 'volvo']
-
 class BarChart extends Component {
     constructor(props) {
         super(props);
         console.log("BarChart constructor ran")
         const dataBrands = props.brands;
-        //const dataBrands = ['Audi', 'Volvo']
         const priceData = averagePrices(dataBrands[0]);
-        //const brands = ["2018", "2019", '2020'];
         const years = ["2018Prices", '2019Prices', '2020Prices'];
-        //const prices = Object.values(priceData['2020']);
         const prices = dataBrands.map(brand => averagePrices(brand)['2020'])//[priceData['2020']]
-        //console.log(priceData['2020']);
         const brands = props.brands;
         this.calcData = this.calcData.bind(this);
 
@@ -58,11 +52,6 @@ class BarChart extends Component {
         legendPosition: 'bottom'
 
     }
-    /*    componentDidMount() {
-           console.log(this.props.brands);
-   
-   
-       } */
 
     componentDidUpdate(prevProps, prevState) {
         console.log(prevState.chartData.labels);
@@ -71,13 +60,8 @@ class BarChart extends Component {
         if (prevState.chartData.labels !== this.state.chartData.labels) {
             console.log("TRUE! " + prevProps.brands);
             const dataBrands = prevProps.brands;
-            //const dataBrands = ['Audi', 'Volvo']
-            //const priceData = averagePrices(dataBrands[0]);
-            //const brands = ["2018", "2019", '2020'];
             const years = ["2018Prices", '2019Prices', '2020Prices'];
-            //const prices = Object.values(priceData['2020']);
             const prices = dataBrands.map(brand => averagePrices(brand)['2020'])//[priceData['2020']]
-            //console.log(priceData['2020']);
             const brands = prevProps.brands;
             this.setState({
                 chartData: {
@@ -112,15 +96,8 @@ class BarChart extends Component {
         }
     }
     calcData(brands) {
-        //const dataBrands = brands;
-        //const dataBrands = ['Audi', 'Volvo']
-        //const priceData = averagePrices(dataBrands[0]);
-        //const brands = ["2018", "2019", '2020'];
         const years = ["2018Prices", '2019Prices', '2020Prices'];
-        //const prices = Object.values(priceData['2020']);
         const prices = brands.map(brand => parseInt(averagePrices(brand)['2020']))//[priceData['2020']]
-        //console.log(priceData['2020']);
-        //const brands = prevProps.brands;
         return ({
             labels: brands,
             datasets: [
@@ -157,8 +134,8 @@ class BarChart extends Component {
         return (
             <div className="BarChart">
                 <Bar
-                    width={400}
-                    height={300}
+                    width={200}
+                    height={200}
                     options={{ maintainAspectRatio: false }}
                     data={this.calcData(this.props.brands)}
                     options={{

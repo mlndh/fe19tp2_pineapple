@@ -21,13 +21,6 @@ import { vsyears } from '../volkswagen';
 import { volvoyears } from '../volvo';
 
 
-
-
-
-
-
-
-
 export const multi = {
     Audi: Audiyears.results,
     Bmw: bmwyears.results,
@@ -51,40 +44,8 @@ export const multi = {
     Volkswagen: vsyears.results,
     Volvo: volvoyears.results,
 
-
-
-
-
-
-
-
-
 }
 
-
-// ytterst: märket. exempel:
-// hyundai: [{...}],
-/* 
-// multiyears["brand"].filter
-const bmw2020 = bmwyears.results.filter(item => {
-
-    return item.tillverkningsar === "2020";
-})
-console.log("antal 2020: " + bmw2020.length)
-
-const bmw2019 = bmwyears.results.filter(item => {
-
-    return item.tillverkningsar === "2019";
-})
-console.log("antal 2019: " + bmw2019.length)
-
-const bmw2018 = bmwyears.results.filter(item => {
-
-    return item.tillverkningsar === "2018";
-})
-console.log("antal 2018: " + bmw2018.length)
-
- */
 
 const arrAvg = arr => arr.reduce((a, b) => {
 
@@ -106,7 +67,6 @@ export const averagePrices = (brand) => {
     return {
         2018: arrAvg(brand2018Prices), 2019: arrAvg(brand2019Prices),
         2020: arrAvg(brand2020Prices)
-
     }
 }
 

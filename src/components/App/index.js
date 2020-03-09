@@ -12,45 +12,16 @@ import AdminPage from "../Admin";
 import * as ROUTES from "../../constants/routes";
 import { withAuthentication } from "../Session";
 
-//import GraphForm from "../GraphForm";
-//import { volvo, averagePrice } from "./data";
-
-// import Chart from "../Charts/Chart.js";
-//import MultiChart from "../Charts/MultiChart";
-/* import MultiChart from "../Charts/MultiChart"; */
-
-//import { averagePrice } from "./data";
 
 class App extends React.Component {
-  /*   constructor(props) {
-      super(props);
-  
-      this.handleAddChart = this.handleAddChart.bind(this);
-      this.handleChartBrandChange = this.handleChartBrandChange.bind(this);
-      this.state = { charts: ["Audi"] };
-    } */
 
-  /*   handleAddChart() {
-      const chartArray = this.state.charts;
-      chartArray.push("Audi");
-      this.setState({ charts: chartArray });
-    }
-  
-    handleChartBrandChange(index, brand) {
-      //console.log("index: " + index + ", brand: " + brand);
-      const chartArray = this.state.charts;
-      chartArray[index] = brand;
-      this.setState({ charts: chartArray });
-    } */
   render() {
     return (
       <React.Fragment>
         <Router>
           <div>
             <Navigation />
-            <hr />
             <Switch>
-              {/* <Route exact path={ROUTES.LANDING} component={LandingPage} /> */}
               <Route
                 exact
                 path={ROUTES.LANDING}
