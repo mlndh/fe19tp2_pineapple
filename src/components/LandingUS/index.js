@@ -35,12 +35,13 @@ const H1div = styled.div`
 `;
 const Buttonstyle = styled.button`
 background-color: white;
-width: 3rem;
-height: 1.8rem;
+width: 16rem;
+height: 14rem;
 border: none;
 border-radius: 1rem;
 text-align: center;
-margin-bottom: 2%;
+margin-top: 2%;
+margin-right: 10px;
 `;
 
 const Chartsection = styled.div`
@@ -133,7 +134,7 @@ class LandingUS extends React.Component {
             <Buttonstyle>
               <AddButton handleAddChart={this.handleAddChart} />
             </Buttonstyle>
-            <div className="chartContainer">
+            <Chartcontainer>
               {this.state.charts
                 ? this.state.charts.map((chart, index) => (
                   <MultiChart
@@ -148,7 +149,7 @@ class LandingUS extends React.Component {
               {this.state.charts ? (
                 <BarChart brands={this.state.charts} />
               ) : null}
-            </div>
+            </Chartcontainer>
           </Chartsection>
         </USstyle>
       </React.Fragment>
