@@ -12,14 +12,6 @@ import AdminPage from "../Admin";
 import * as ROUTES from "../../constants/routes";
 import { withAuthentication } from "../Session";
 
-//import GraphForm from "../GraphForm";
-//import { volvo, averagePrice } from "./data";
-
-// import Chart from "../Charts/Chart.js";
-//import MultiChart from "../Charts/MultiChart";
-/* import MultiChart from "../Charts/MultiChart"; */
-
-//import { averagePrice } from "./data";
 
 class App extends React.Component {
 
