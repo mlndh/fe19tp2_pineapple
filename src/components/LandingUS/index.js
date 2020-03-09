@@ -42,6 +42,7 @@ border-radius: 1rem;
 text-align: center;
 margin-top: 2%;
 margin-right: 10px;
+justify-content: flex-end;
 `;
 
 const Chartsection = styled.div`
@@ -131,9 +132,7 @@ class LandingUS extends React.Component {
           </H1div>
 
           <Chartsection>
-            <Buttonstyle>
-              <AddButton handleAddChart={this.handleAddChart} />
-            </Buttonstyle>
+
             <Chartcontainer>
               {this.state.charts
                 ? this.state.charts.map((chart, index) => (
@@ -150,6 +149,9 @@ class LandingUS extends React.Component {
                 <BarChart brands={this.state.charts} />
               ) : null}
             </Chartcontainer>
+            <Buttonstyle>
+              <AddButton handleAddChart={this.handleAddChart} />
+            </Buttonstyle>
           </Chartsection>
         </USstyle>
       </React.Fragment>
