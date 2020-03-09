@@ -48,7 +48,7 @@ const Navigationsection = styled.ul`
   justify-content: space-evenly;
   box-shadow: 0.1rem 0rem 1rem rgba(0, 0, 0, 0.2);
   
-  @media (max-width: 380px) {
+  @media (max-width: 649px) {
     background-color: white;
     overflow: hidden;
     bottom: 0;
@@ -66,11 +66,12 @@ const Styledlinks = styled.li`
 
   button {
    border: none;
+   background-color: transparent;
   }
 
   img {
     width: 3.5rem;
-    background-color: white;
+    background-color: transparent;
   }
 `;
 
@@ -103,13 +104,15 @@ const NavigationAuth = ({ authUser }) => (
       )}
     </Styledlinks>
     
-    <Styledlinks>
+        {/* These Roles.CARCOMPANY creates a dead box in navbar on mobileview! need the get fixed before launch! */}
+
+    {<Styledlinks>
       {authUser.roles.includes(ROLES.USCENTER) && (
         <Link to={ROUTES.LANDINGUS}>
           <img src={KPIreport} />
         </Link>
       )}
-    </Styledlinks>
+    </Styledlinks>}
     
     <Styledlinks>
       {authUser.roles.includes(ROLES.ADMIN) && (
