@@ -13,7 +13,10 @@ const UScentericon = require("../Assets/US center.jpeg");
 const USstyle = styled.div`
   background: lightgrey;
   img {
-    width: 25rem;
+    width:  9rem;
+  }
+  @media (max-width: 649px) {
+    margin-bottom: 13%;
   }
 `;
 
@@ -37,6 +40,7 @@ height: 1.8rem;
 border: none;
 border-radius: 1rem;
 text-align: center;
+margin-bottom: 2%;
 `;
 
 const Chartsection = styled.div`
@@ -137,8 +141,6 @@ class LandingUS extends React.Component {
               {this.state.charts ? (
                 <BarChart brands={this.state.charts} />
               ) : null}
-              {/* <MultiChart /> */}
-              {/* < Chart /> */}
             </div>
           </Chartsection>
         </USstyle>

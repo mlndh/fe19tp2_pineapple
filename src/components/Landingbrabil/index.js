@@ -18,6 +18,9 @@ const Brabilstyle = styled.div`
   img {
     width:  9rem;
   }
+  @media (max-width: 649px) {
+    margin-bottom: 13%;
+  }
 `;
 
 const Styledlinks = styled.div`
@@ -40,6 +43,7 @@ height: 1.8rem;
 border: none;
 border-radius: 1rem;
 text-align: center;
+margin-bottom: 2%;
 `;
 
 const Chartsection = styled.div`
@@ -47,9 +51,20 @@ const Chartsection = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex-wrap: wrap;
   width: 100vw;
-  height: 85vh;
+  min-height: 85vh;
 `;
+
+
+const Chartcontainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+
 
 class Landingbrabil extends React.Component {
   constructor(props) {
@@ -123,7 +138,7 @@ class Landingbrabil extends React.Component {
             <Buttonstyle>
               <AddButton handleAddChart={this.handleAddChart} />
             </Buttonstyle>
-            <div className="chartContainer">
+            <Chartcontainer>
               {this.state.charts
                 ? this.state.charts.map((chart, index) => (
                   <MultiChart
@@ -138,10 +153,7 @@ class Landingbrabil extends React.Component {
               {this.state.charts ? (
                 <BarChart brands={this.state.charts} />
               ) : null}
-
-              {/* <MultiChart /> */}
-              {/* < Chart /> */}
-            </div>
+            </Chartcontainer>
           </Chartsection>
         </Brabilstyle>
       </React.Fragment>
