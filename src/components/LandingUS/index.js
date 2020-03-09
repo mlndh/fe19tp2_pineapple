@@ -11,7 +11,7 @@ import { withAuthorization } from "../Session";
 const UScentericon = require("../Assets/US center.jpeg");
 
 const USstyle = styled.div`
-  background: lightgrey;
+  background: beige;
   img {
     width:  9rem;
   }
@@ -48,8 +48,17 @@ const Chartsection = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex-wrap: wrap;
   width: 100vw;
-  height: 80%;
+  min-height: 85vh;
+`;
+
+
+const Chartcontainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 `;
 
 class LandingUS extends React.Component {
