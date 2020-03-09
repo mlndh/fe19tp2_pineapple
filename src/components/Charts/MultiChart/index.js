@@ -8,13 +8,11 @@ import { averagePrices, getBrands } from "./multiyears";
 class MultiChart extends Component {
     constructor(props) {
         super(props);
-        //const yearData = averageYears(); // {audi: 340000, volvo: 105000}
-        //const brands = Object.keys(yearsData);
-        //const years = Object.values(yearsData)
-        const dataBrands = getBrands();
 
-        //const priceData = averagePrices(dataBrands[0]);
+        const dataBrands = getBrands();
+        
         let priceData;
+        
         if (this.props.chart) {
             priceData = averagePrices(this.props.chart);
         }
