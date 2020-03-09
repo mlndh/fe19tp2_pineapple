@@ -134,9 +134,7 @@ class Landingbrabil extends React.Component {
           </H1div>
 
           <Chartsection>
-            <Buttonstyle>
-              <AddButton handleAddChart={this.handleAddChart} />
-            </Buttonstyle>
+
             <Chartcontainer>
               {this.state.charts
                 ? this.state.charts.map((chart, index) => (
@@ -153,6 +151,9 @@ class Landingbrabil extends React.Component {
                 <BarChart brands={this.state.charts} />
               ) : null}
             </Chartcontainer>
+            <Buttonstyle>
+              <AddButton handleAddChart={this.handleAddChart} />
+            </Buttonstyle>
           </Chartsection>
         </Brabilstyle>
       </React.Fragment>
