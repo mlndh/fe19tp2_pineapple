@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Bar, Line, Pie, Doughnut } from "react-chartjs-2";
 import RemoveButton from "../../RemoveButton";
 
-//import { multi } from './multiyears';
+
 import { averagePrices, getBrands } from "./multiyears";
 
 class MultiChart extends Component {
@@ -10,9 +10,9 @@ class MultiChart extends Component {
         super(props);
 
         const dataBrands = getBrands();
-        
+
         let priceData;
-        
+
         if (this.props.chart) {
             priceData = averagePrices(this.props.chart);
         }
@@ -95,10 +95,6 @@ class MultiChart extends Component {
         displayLegend: false,
         legendPosition: "bottom"
     };
-    /*  componentDidMount() {
-           console.log(unique);
-   
-       } */
     render() {
         const { chart } = this.props;
         const brands = getBrands();

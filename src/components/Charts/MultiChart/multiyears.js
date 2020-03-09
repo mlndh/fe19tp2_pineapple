@@ -70,4 +70,4 @@ export const averagePrices = (brand) => {
     }
 }
 
-export const getBrands = () => Object.keys(multi) // ["bmw", "dacia", osv]
+export const getBrands = () => Object.keys(multi) 

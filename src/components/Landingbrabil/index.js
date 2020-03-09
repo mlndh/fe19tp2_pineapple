@@ -38,12 +38,13 @@ const H1div = styled.div`
 `;
 const Buttonstyle = styled.button`
 background-color: white;
-width: 3rem;
-height: 1.8rem;
+width: 16rem;
+height: 14rem;
 border: none;
 border-radius: 1rem;
 text-align: center;
-margin-bottom: 2%;
+margin-top: 2%;
+margin-right: 10px;
 `;
 
 const Chartsection = styled.div`
@@ -97,7 +98,6 @@ class Landingbrabil extends React.Component {
       });
   }
   handleChartBrandChange(index, brand) {
-    //console.log("index: " + index + ", brand: " + brand);
     const chartArray = this.state.charts;
     chartArray[index] = brand;
     this.props.firebase
@@ -114,7 +114,6 @@ class Landingbrabil extends React.Component {
       .child("charts")
       .on("value", snapshot => {
         let chartObject = snapshot.val();
-        //console.log(chartObject);
         if (!chartObject) {
           chartObject = [];
         }

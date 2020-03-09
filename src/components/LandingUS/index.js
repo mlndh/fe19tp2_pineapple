@@ -93,7 +93,6 @@ class LandingUS extends React.Component {
   }
 
   handleChartBrandChange(index, brand) {
-    //console.log("index: " + index + ", brand: " + brand);
     const chartArray = this.state.charts;
     chartArray[index] = brand;
     this.props.firebase
@@ -110,7 +109,6 @@ class LandingUS extends React.Component {
       .child("charts")
       .on("value", snapshot => {
         let chartObject = snapshot.val();
-        //console.log(chartObject);
         if (!chartObject) {
           chartObject = [];
         }
