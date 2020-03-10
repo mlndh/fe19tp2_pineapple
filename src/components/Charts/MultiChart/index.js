@@ -31,7 +31,7 @@ class MultiChart extends Component {
                 labels: brands,
                 datasets: [
                     {
-                        label: "Population",
+                        label: "SEK",
                         data: prices,
                         backgroundColor: [
                             "pink",
@@ -66,7 +66,7 @@ class MultiChart extends Component {
                 labels: brands,
                 datasets: [
                     {
-                        label: "Population",
+                        label: "SEK",
                         data: prices,
                         backgroundColor: [
                             "pink",
@@ -100,10 +100,10 @@ class MultiChart extends Component {
         const brands = getBrands();
         return (
             <div key={Math.random()} className="chart">
-                <select onChange={this.handleChange}>
+                <select onChange={this.handleChange} className="dropDown">
                     {brands.map(brand => {
                         if (brand === chart) {
-                            return <option selected>{brand}</option>;
+                            return <option selected >{brand}</option>;
                         } else {
                             return <option>{brand}</option>;
                         }
