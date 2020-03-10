@@ -13,7 +13,7 @@ const UScentericon = require("../Assets/US center.jpeg");
 const USstyle = styled.div`
   background: beige;
   img {
-    width:  9rem;
+    width: 9rem;
   }
   @media (max-width: 649px) {
     margin-bottom: 13%;
@@ -34,15 +34,15 @@ const H1div = styled.div`
   margin-left: 10%;
 `;
 const Buttonstyle = styled.button`
-background-color: white;
-width: 16rem;
-height: 14rem;
-border: none;
-border-radius: 1rem;
-text-align: center;
-margin-top: 2%;
-margin-right: 10px;
-justify-content: flex-end;
+  background-color: white;
+  width: 16rem;
+  height: 14rem;
+  border: none;
+  border-radius: 1rem;
+  text-align: center;
+  margin-top: 2%;
+  margin-right: 10px;
+  justify-content: flex-end;
 `;
 
 const Chartsection = styled.div`
@@ -54,7 +54,6 @@ const Chartsection = styled.div`
   width: 100vw;
   min-height: 85vh;
 `;
-
 
 const Chartcontainer = styled.div`
   display: flex;
@@ -128,21 +127,24 @@ class LandingUS extends React.Component {
       <React.Fragment>
         <USstyle>
           <H1div>
-            <h1><img src={UScentericon} /></h1>
+            <img src={UScentericon} />
+            <h1>
+              Here you can chose what brands you want to see in the charts. They
+              will be saved by default and you can delete them anytime.
+            </h1>
           </H1div>
 
           <Chartsection>
-
             <Chartcontainer>
               {this.state.charts
                 ? this.state.charts.map((chart, index) => (
-                  <MultiChart
-                    handleChartBrandChange={this.handleChartBrandChange}
-                    index={index}
-                    chart={chart}
-                    handleRemoveChart={this.handleRemoveChart}
-                  />
-                ))
+                    <MultiChart
+                      handleChartBrandChange={this.handleChartBrandChange}
+                      index={index}
+                      chart={chart}
+                      handleRemoveChart={this.handleRemoveChart}
+                    />
+                  ))
                 : null}
 
               {this.state.charts ? (

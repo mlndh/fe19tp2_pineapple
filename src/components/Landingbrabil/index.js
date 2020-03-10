@@ -16,7 +16,7 @@ const Brabilicon = require("../Assets/brabil.jpeg");
 const Brabilstyle = styled.div`
   background: beige;
   img {
-    width:  9rem;
+    width: 9rem;
   }
   @media (max-width: 649px) {
     margin-bottom: 13%;
@@ -37,14 +37,14 @@ const H1div = styled.div`
   margin-left: 10%;
 `;
 const Buttonstyle = styled.button`
-background-color: white;
-width: 16rem;
-height: 14rem;
-border: none;
-border-radius: 1rem;
-text-align: center;
-margin-top: 2%;
-margin-right: 10px;
+  background-color: white;
+  width: 16rem;
+  height: 14rem;
+  border: none;
+  border-radius: 1rem;
+  text-align: center;
+  margin-top: 2%;
+  margin-right: 10px;
 `;
 
 const Chartsection = styled.div`
@@ -57,15 +57,12 @@ const Chartsection = styled.div`
   min-height: 85vh;
 `;
 
-
 const Chartcontainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 `;
-
-
 
 class Landingbrabil extends React.Component {
   constructor(props) {
@@ -130,21 +127,25 @@ class Landingbrabil extends React.Component {
       <React.Fragment>
         <Brabilstyle>
           <H1div>
-            <h1><img src={Brabilicon} /></h1>
+            <img src={Brabilicon} />
+            <h1>
+              {" "}
+              Here you can chose what brands you want to see in the charts. They
+              will be saved by default and you can delete them anytime.{" "}
+            </h1>
           </H1div>
 
           <Chartsection>
-
             <Chartcontainer>
               {this.state.charts
                 ? this.state.charts.map((chart, index) => (
-                  <MultiChart
-                    handleChartBrandChange={this.handleChartBrandChange}
-                    index={index}
-                    chart={chart}
-                    handleRemoveChart={this.handleRemoveChart}
-                  />
-                ))
+                    <MultiChart
+                      handleChartBrandChange={this.handleChartBrandChange}
+                      index={index}
+                      chart={chart}
+                      handleRemoveChart={this.handleRemoveChart}
+                    />
+                  ))
                 : null}
 
               {this.state.charts ? (
