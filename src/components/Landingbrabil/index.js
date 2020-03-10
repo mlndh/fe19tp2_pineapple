@@ -62,6 +62,9 @@ const Chartcontainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  img {
+    width: 1.5rem;
+  }
 `;
 
 class Landingbrabil extends React.Component {

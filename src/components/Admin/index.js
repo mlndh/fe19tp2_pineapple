@@ -9,6 +9,7 @@ import styled from "styled-components";
 const Maindiv = styled.div`
   margin-left: 10%;
   h1 {
+    padding-top: 40px;
     padding-bottom: 20px;
   }
 `;
@@ -43,17 +44,18 @@ class AdminPage extends Component {
     const { users, loading } = this.state;
     return (
       <Maindiv>
-        <h1>
-          {" "}
-          Admin
-          <br />
+        <h1> Admin </h1>
+        <br />
+        <h2>
           Below you can sign up new users and you have a list over every user.
-        </h1>
+        </h2>
         {loading && <div>Loading ...</div>}
         <SignUpForm />
         <br />
-
-        <UserList users={users} />
+        <h3>
+          Users:
+          <UserList users={users} />
+        </h3>
       </Maindiv>
     );
   }
