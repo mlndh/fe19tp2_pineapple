@@ -42,6 +42,7 @@ border-radius: 1rem;
 text-align: center;
 margin-top: 2%;
 margin-right: 10px;
+margin-left: 10px;
 justify-content: flex-end;
 `;
 
@@ -53,6 +54,7 @@ const Chartsection = styled.div`
   flex-wrap: wrap;
   width: 100vw;
   min-height: 85vh;
+  flex-grow: 1;
 `;
 
 

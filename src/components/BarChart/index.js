@@ -19,7 +19,7 @@ class BarChart extends Component {
                 labels: brands,
                 datasets: [
                     {
-                        label: 'Population',
+                        label: 'SEK',
                         data: prices,
                         backgroundColor: [
                             'pink',
@@ -68,7 +68,7 @@ class BarChart extends Component {
                     labels: brands,
                     datasets: [
                         {
-                            label: 'Population',
+                            label: 'SEK',
                             data: prices,
                             backgroundColor: [
                                 'pink',
@@ -102,7 +102,7 @@ class BarChart extends Component {
             labels: brands,
             datasets: [
                 {
-                    label: 'Population',
+                    label: 'SEK',
                     data: prices,
                     backgroundColor: [
                         'pink',
