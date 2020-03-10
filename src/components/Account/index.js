@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const Maindiv = styled.div`
   margin-left: 10%;
+  padding-top: 40px;
 `;
 
 const AccountPage = () => (
@@ -11,7 +12,7 @@ const AccountPage = () => (
     {authUser => (
       <Maindiv>
         <h1>Settings</h1>
-        <h1>You are logged in as: {authUser.email}</h1>
+        <h2>You are logged in as: {authUser.email}</h2>
       </Maindiv>
     )}
   </AuthUserContext.Consumer>

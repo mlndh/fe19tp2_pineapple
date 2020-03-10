@@ -15,21 +15,25 @@ const Maindiv = styled.div`
     padding: 5px;
   }
   h1 {
+    padding-top: 40px;
     padding-bottom: 25px;
+  }
+  p {
+    font-size: 15px;
   }
 `;
 
 const HomePage = () => (
   <Maindiv>
-    <h1>
-      Home Page
-      <br />
+    <h1>Home Page</h1>
+    <br />
+    <p>
       <img src={Homeicon} /> This page <br />
       <img src={KPIreport} /> Here are your charts <br />
       <img src={Settingsicon} /> Settings <br />
       <img src={Adminicon} /> Adminpage <br />
       <img src={Logouticon} /> Sign out <br />
-    </h1>
+    </p>
   </Maindiv>
 );
 const condition = authUser => !!authUser;

@@ -53,6 +53,9 @@ const Chartsection = styled.div`
   flex-wrap: wrap;
   width: 100vw;
   min-height: 85vh;
+  img {
+    width: 1.5rem;
+  }
 `;
 
 const Chartcontainer = styled.div`

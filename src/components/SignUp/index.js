@@ -116,45 +116,46 @@ class SignUpFormBase extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <input
-          name="username"
-          value={username}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Full Name"
-        />{" "}
-        <input
-          name="email"
-          value={email}
-          onChange={this.onChange}
-          type="text"
-          placeholder="Email Address"
-        />
-        <input
-          name="passwordOne"
-          value={passwordOne}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Password"
-        />{" "}
-        <input
-          name="passwordTwo"
-          value={passwordTwo}
-          onChange={this.onChange}
-          type="password"
-          placeholder="Confirm Password"
-        />{" "}
-        <br />
-        <label>
-          Admin:
+        <h2>
           <input
-            name="isAdmin"
-            type="checkbox"
-            checked={isAdmin}
-            onChange={this.onChangeCheckbox}
+            name="username"
+            value={username}
+            onChange={this.onChange}
+            type="text"
+            placeholder="Full Name"
+          />{" "}
+          <input
+            name="email"
+            value={email}
+            onChange={this.onChange}
+            type="text"
+            placeholder="Email Address"
           />
-        </label>
-        {/* <label>
+          <input
+            name="passwordOne"
+            value={passwordOne}
+            onChange={this.onChange}
+            type="password"
+            placeholder="Password"
+          />{" "}
+          <input
+            name="passwordTwo"
+            value={passwordTwo}
+            onChange={this.onChange}
+            type="password"
+            placeholder="Confirm Password"
+          />{" "}
+          <br />
+          <label>
+            Admin
+            <input
+              name="isAdmin"
+              type="checkbox"
+              checked={isAdmin}
+              onChange={this.onChangeCheckbox}
+            />
+          </label>
+          {/* <label>
           Mollerbil:
           <input
             name="isMollerbil"
@@ -163,28 +164,29 @@ class SignUpFormBase extends Component {
             onChange={this.onChangeCheckbox}
           />
         </label> */}
-        <label>
-          Brabil:
-          <input
-            name="isBrabil"
-            type="checkbox"
-            checked={isBrabil}
-            onChange={this.onChangeCheckbox}
-          />
-        </label>
-        <label>
-          UScenter:
-          <input
-            name="isUscenter"
-            type="checkbox"
-            checked={isUscenter}
-            onChange={this.onChangeCheckbox}
-          />
-        </label>
-        <br />
-        <button disabled={isInvalid} type="submit">
-          Sign Up
-        </button>
+          <label>
+            Brabil
+            <input
+              name="isBrabil"
+              type="checkbox"
+              checked={isBrabil}
+              onChange={this.onChangeCheckbox}
+            />
+          </label>
+          <label>
+            UScenter
+            <input
+              name="isUscenter"
+              type="checkbox"
+              checked={isUscenter}
+              onChange={this.onChangeCheckbox}
+            />
+          </label>
+          <br />
+          <button disabled={isInvalid} type="submit">
+            Sign Up
+          </button>
+        </h2>
         {error && <p>{error.message}</p>}
       </form>
     );
