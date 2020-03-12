@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import * as ROUTES from "../../constants/routes";
 import styled, { createGlobalStyle } from "styled-components";
 import AddButton from "../AddButton";
 import BarChart from "../BarChart";
 import MultiChart from "../Charts/MultiChart";
 import { withFirebase } from "../Firebase";
-import { SignUpForm } from "../SignUp";
 import { compose } from "recompose";
 import { withAuthorization } from "../Session";
 import * as ROLES from "../../constants/roles";
@@ -21,16 +18,6 @@ const Brabilstyle = styled.div`
   }
   @media (max-width: 649px) {
     margin-bottom: 13%;
-  }
-`;
-
-const Styledlinks = styled.div`
-  a {
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-decoration: none;
-    list-style: none;
-    color: black;
   }
 `;
 
