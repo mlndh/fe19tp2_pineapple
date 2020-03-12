@@ -52,7 +52,6 @@ class SignUpFormBase extends Component {
       email,
       passwordOne,
       isAdmin,
-      // isMollerbil,
       isBrabil,
       isUscenter
     } = this.state;
@@ -60,9 +59,6 @@ class SignUpFormBase extends Component {
     if (isAdmin) {
       roles.push(ROLES.ADMIN);
     }
-    /* if (isMollerbil) {
-      roles.push(ROLES.MOLLERBIL);
-    } */
     if (isBrabil) {
       roles.push(ROLES.BRABIL);
     }
@@ -103,7 +99,6 @@ class SignUpFormBase extends Component {
       passwordOne,
       passwordTwo,
       isAdmin,
-      // isMollerbil,
       isUscenter,
       isBrabil,
       error
@@ -155,15 +150,6 @@ class SignUpFormBase extends Component {
               onChange={this.onChangeCheckbox}
             />
           </label>
-          {/* <label>
-          Mollerbil:
-          <input
-            name="isMollerbil"
-            type="checkbox"
-            checked={isMollerbil}
-            onChange={this.onChangeCheckbox}
-          />
-        </label> */}
           <label>
             Brabil
             <input
