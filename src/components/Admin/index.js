@@ -8,6 +8,7 @@ import styled from "styled-components";
 
 const Maindiv = styled.div`
   margin-left: 10%;
+
   h1 {
     padding-top: 40px;
     padding-bottom: 20px;

@@ -47,7 +47,7 @@ const Navigationsection = styled.ul`
   flex-wrap: wrap;
   justify-content: space-evenly;
   box-shadow: 0.1rem 0rem 1rem rgba(0, 0, 0, 0.2);
-  
+
   @media (max-width: 649px) {
     background-color: white;
     overflow: hidden;
@@ -65,8 +65,8 @@ const Styledlinks = styled.li`
   }
 
   button {
-   border: none;
-   background-color: transparent;
+    border: none;
+    background-color: transparent;
   }
 
   img {
@@ -82,8 +82,8 @@ const Navigation = () => (
         authUser ? (
           <NavigationAuth authUser={authUser} />
         ) : (
-            <NavigationNonAuth />
-          )
+          <NavigationNonAuth />
+        )
       }
     </AuthUserContext.Consumer>
   </div>
@@ -103,17 +103,19 @@ const NavigationAuth = ({ authUser }) => (
         </Link>
       )}
     </Styledlinks>
-    
-        {/* These Roles.CARCOMPANY creates a dead box in navbar on mobileview! need the get fixed before launch! */}
 
-    {<Styledlinks>
-      {authUser.roles.includes(ROLES.USCENTER) && (
-        <Link to={ROUTES.LANDINGUS}>
-          <img src={KPIreport} />
-        </Link>
-      )}
-    </Styledlinks>}
-    
+    {/* These Roles.CARCOMPANY creates a dead box in navbar on mobileview! need the get fixed before launch! */}
+
+    {
+      <Styledlinks>
+        {authUser.roles.includes(ROLES.USCENTER) && (
+          <Link to={ROUTES.LANDINGUS}>
+            <img src={KPIreport} />
+          </Link>
+        )}
+      </Styledlinks>
+    }
+
     <Styledlinks>
       {authUser.roles.includes(ROLES.ADMIN) && (
         <Link to={ROUTES.ADMIN}>
