@@ -8,7 +8,10 @@ const Adminicon = require("../Assets/Admin-icon.svg");
 const Logouticon = require("../Assets/Logout.svg");
 
 const Maindiv = styled.div`
-  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: arial;
   img {
     width: 3.5rem;
     background-color: transparent;

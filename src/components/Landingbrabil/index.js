@@ -14,7 +14,8 @@ import * as ROLES from "../../constants/roles";
 const Brabilicon = require("../Assets/brabil.jpeg");
 
 const Brabilstyle = styled.div`
-  background: beige;
+  background: white;
+  font-family: arial;
   img {
     width: 9rem;
   }
@@ -35,6 +36,7 @@ const Styledlinks = styled.div`
 
 const H1div = styled.div`
   margin-left: 10%;
+  padding-bottom: 30px;
 `;
 const Buttonstyle = styled.button`
   background-color: white;
@@ -131,11 +133,11 @@ class Landingbrabil extends React.Component {
         <Brabilstyle>
           <H1div>
             <img src={Brabilicon} />
-            <h1>
+            <h3>
               {" "}
               Here you can chose what brands you want to see in the charts. They
               will be saved by default and you can delete them anytime.{" "}
-            </h1>
+            </h3>
           </H1div>
 
           <Chartsection>

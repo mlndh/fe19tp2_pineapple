@@ -11,7 +11,8 @@ import { withAuthorization } from "../Session";
 const UScentericon = require("../Assets/US center.jpeg");
 
 const USstyle = styled.div`
-  background: beige;
+  background: white;
+  font-family: arial;
   img {
     width: 9rem;
   }
@@ -32,6 +33,7 @@ const Styledlinks = styled.div`
 
 const H1div = styled.div`
   margin-left: 10%;
+  padding-bottom: 30px;
 `;
 const Buttonstyle = styled.button`
   background-color: white;
@@ -131,10 +133,10 @@ class LandingUS extends React.Component {
         <USstyle>
           <H1div>
             <img src={UScentericon} />
-            <h1>
+            <h3>
               Here you can chose what brands you want to see in the charts. They
               will be saved by default and you can delete them anytime.
-            </h1>
+            </h3>
           </H1div>
 
           <Chartsection>

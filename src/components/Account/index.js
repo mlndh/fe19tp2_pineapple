@@ -3,8 +3,13 @@ import { AuthUserContext, withAuthorization } from "../Session";
 import styled from "styled-components";
 
 const Maindiv = styled.div`
-  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: arial;
+
   padding-top: 40px;
+  font-family: arial;
 `;
 
 const AccountPage = () => (
