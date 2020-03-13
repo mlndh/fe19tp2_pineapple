@@ -1,68 +1,30 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# fe19tp2_pineapple #
 
-## Available Scripts
+README!
 
-In the project directory, you can run:
+## B-E-V ##
 
-### `npm start`
+Trello : https://trello.com/b/tb7pZAb9/b-e-v
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Contributors: ###
+Malin Dufva-Hjerpe (Malin DH https://github.com/mlndh), Robin Gorski, Adriana Aazami, Andreas Frick Toresand, Dilana Yavuz, Helin Akkus
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+**What is B-E-V?**
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+B-E-V is a web based platform designed to make car dealership easy! B-E-V handles large quantities of information about cars displayed in easy-to-read graphs. This service makes it easy for your car dealership company to get an overlook over all available data and to use that information to your advantage on the market. As admin, you have full control over the team of users and you can easily design the pages to represent your company’s logo and look.
 
-### `npm run build`
+**Features:**
+* Admin page
+* Customise 
+* Dark Mode
+* Responsive on all platforms
+* Select, save and delete charts with different brands per user
+ 
+**Upcoming Features:**
+* Change settings
+ 
+**How To Use The App:**
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To use B-E-V you simply register yourself as a user and sign in. On the homepage you get an overlook over the different pages. On the charts page you can handle all the different graphs and compare the information from all the different brands. The admin page only the admin has access to and there you can build your teams, add and delete users as you you see fit. In settings you will be able you will be able to change the look of the app. 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
