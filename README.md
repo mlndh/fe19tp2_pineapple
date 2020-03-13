@@ -7,7 +7,7 @@ README!
 Trello : https://trello.com/b/tb7pZAb9/b-e-v
 
 ### Contributors: ###
-Malin Dufva-Hjerpe (Malin DH https://github.com/mlndh), Robin Gorski, Adriana Aazami, Andreas Frick Toresand, Dilana Yavuz, Helin Akkus
+Malin DH https://github.com/mlndh, Robin Gorski, Adriana Aazami, Andreas Frick Toresand, Dilana Yavuz, Helin Akkus
 
 
 **What is B-E-V?**
